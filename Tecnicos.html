@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolphin assistant-Matematicas</title>
+    <link rel="stylesheet" href="stylesmath.css">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <h1>Dolphin Assistant</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="matematicas.html">Matematicas</a></li>
+                <li><a href="Castellano.html">Lenguaje</a></li>
+                <li><a href="biologia.html">Biologia</a></li>
+                <li><a href="sociales.html">Sociales</a></li>
+                <li><a href="Tecnicos.html">Tecnicos SENA</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h1>Bienvenidos a la seccion matematicas</h1>
+            <p>seleccione aqui los temas que nesecita entender o aprender</p>
+            <a href="#seccion1">algebra</a>
+            <a href="#seccion2">Sistemas de ecuacionees lineales</a>
+            <a href="#seccion3">Factorizacion</a>
+            <a href="#seccion4">funciones</a>
+            <a href="#seccion5">ecuacion de linea recta</a>
+            <a href="#seccion6">funciones cuadraticas</a>
+            <a href="#seccion7">ecuaciones generales</a>
+            <a href="#seccion8">Razones trigonometricas</a>
+        </section>
+        <div class="container">
+            <div class="column" id="seccion1">
+               <h2>¿Que es el algebra?</h2>
+               <p>El álgebra  es la rama de la matemática que estudia la combinación de elementos de estructuras abstractas acorde a ciertas reglas.Originalmente esos elementos podían ser interpretados como números o cantidades, por lo que el álgebra en cierto modo fue originalmente una generalización y extensión de la aritmética.</p>
+               <p>Consiste en que los números se emplean para representar cantidades conocidas y determinadas. Las letras se emplean para representar toda clase de cantidades, ya sean conocidas o desconocidas. Las cantidades conocidas se expresan por las primeras letras del alfabeto: a, b, c, d, … Las cantidades desconocidas se representan por las últimas letras del alfabeto: u, v, w, x, y, z.16​
+
+                Los signos empleados en álgebra son tres clases: Signos de operación, signos de relación y signos de agrupación.</p>
+                <b>fuentes:</b>
+                <a href="https://es.wikipedia.org/wiki/%C3%81lgebra">https://es.wikipedia.org/wiki/%C3%81lgebra</a>
+            </div>
+            <div class="column">
+                <h2>Aqui algunos videos: </h2>
+                <p><video width="640" height="360" controls>
+                    <source src="¿QUÉ ES EL ÁLGEBRA_ Super facil  - Para principiantes.mp4" type="video/mp4">
+                </video></p>
+            </div>
+        </div>
+        
+    <footer>
+        <p>&copy; 2024 Dolphin Assistant</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.menu-toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
