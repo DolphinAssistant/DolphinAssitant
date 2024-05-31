@@ -7,10 +7,9 @@ body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #5085cabb;
+    background-color: #d5e9ff;
     color: #fff;
     overflow-x: hidden;
-    background: linear-gradient(rgb(46, 102, 255), rgb(157, 188, 255));
 }
 .login-button-container {
     padding-right: 5px;
@@ -34,7 +33,7 @@ body {
     background-color: #0056b3; /* Darker color on hover */
   }
 header {
-    background-color: #001235a6;
+    background-color: #001132cb;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -116,26 +115,27 @@ nav ul li a:hover {
     color: black;
 }
 
+
 .container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px;
+    padding-bottom: 20px;;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
-.column, .section {
-    background-color: #fff; /* Fondo del contenedor */
-    border-radius: 10px;
-    border-color: none;
+.box {
+    width: 30%;
     padding: 20px;
-    margin: 10px;
-    width: calc(100% - 40px);
+    font-family: "nunito",sans-serif;
+    height: 400px;
+    background-color: #004b76ba;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-color: #004b76ba;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
-.column {
-    border: 2px solid #1a1a1a; /* Borde turquesa más opaco */
-}
-
-
 
 footer {
     background-color: #000;
@@ -176,38 +176,15 @@ footer {
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
 }
-.other-container {
-    width: 194%; /* Occupy 80% of the parent container's width */
-    margin: 0 auto; /* Center horizontally */
-    box-sizing: border-box; /* Prevent margin collapse */
-  }
+
 .scroll-button:hover {
     background: white;
     color: black;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px auto; /* Centrar los contenedores horizontalmente */
-}
-
-.column {
-    background-color: #2b6effbb; /* Fondo del contenedor */
-    border-radius: 10px;
-    border-color: transparent;
-    padding: 20px;
-    margin: 10px;
-    width: 45%; /* Reducir el ancho para dejar espacio al otro contenedor */
-   
-}
-
 .section {
-    background-color: #2b6effbb;
-    border-radius: 10px;
-
+    background-color: #ffffff39;
+    color:#000;
     padding: 20px;
     margin: 10px;
-    width: calc(50% - 20px); /* Ancho del 50% menos el espacio entre los contenedores */
-    
 }
