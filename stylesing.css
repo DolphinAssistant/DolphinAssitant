@@ -1,6 +1,6 @@
 @font-face {
-    font-family: nunito;
-    src: url(NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+  font-family: nunito;
+  src: url(NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
 }
 
 body {
@@ -8,12 +8,12 @@ body {
   margin: 0;
   overflow-x: hidden;
   padding: 0;
-  background-color: #e6d8ffc5;;
+  background-color: #dabee6bb;
   color: #ffffff;
 }
 
 header {
-  background-color: #0b00358e;
+  background-color: #1e0035b6;
   color: #fff;
   padding: 10px 20px;
   display: flex;
@@ -69,7 +69,7 @@ nav ul li a:hover {
   color: #00d9ff;
 }
 
-.container {
+.container-pr {
   display: flex;
   margin: 20px;
 }
@@ -77,42 +77,75 @@ nav ul li a:hover {
 .container-one {
   width: 20%; /* Ancho del 40% para el primer contenedor */
   margin-right: 20px; /* Espacio entre los dos contenedores */
-  background-color: #3a00a531;; /* Fondo del contenedor */
+  background-color: #d2a6e9b6; /* Fondo del contenedor */
   padding: 20px;
-  border-radius: 10px;
-  color: #ffffff; /* Color del texto */
+  color: #000000; /* Color del texto */
 }
 
 .container-two {
   width: 80%; /* Ancho del 55% para el segundo contenedor */
-  background-color: #3a00a531; /* Fondo del contenedor */
+  background-color: #f2deff9f; /* Fondo del contenedor */
   padding: 20px;
-  border-radius: 10px;
-  color: #ffffff; /* Color del texto */
+  color: #000000; /* Color del texto */
 }
 
+.column1 {
+  background-color: transparent; /* Fondo del contenedor */
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #000000; /* Color del texto */
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+.container-o {
+  display: flex;
+  padding: 20px;;
+  justify-content: space-around;
+  align-items: left;
+  width: 100%;
+}
+
+.box {
+  width: 30%;
+  padding: 20px;
+  font-family: "nunito",sans-serif;
+  height: 200px;
+  background-color:  #d2a6e9b6;
+  border: 1px solid #ccc;
+  text-align: left;
+  border-color:  #d2a6e9b6;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
 .column {
-    background-color: transparent; /* Fondo del contenedor */
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    color: #ffffff; /* Color del texto */
+  flex: 1;
+  margin: 0 10px;
+  text-align: left;
 }
 
 .section {
-    flex: 1 1 70%; /* Flex-grow, flex-shrink, flex-basis */
-    background-color: #1d1d1d; /* Fondo del contenedor */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    color: #ffffff; /* Color del texto */
+  text-align: center;
+  background-color: #02318fa6;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 footer {
-    background-color: #000000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%; /* Establecer el ancho al 100% */
+  margin: 0; /* Eliminar márgenes */
+
+  bottom: 0; /* Colocar el footer en la parte inferior de la ventana del navegador */
+  left: 0; /* Asegurar que el footer comience desde el borde izquierdo */
+  right: 0; /* Asegurar que el footer termine en el borde derecho */
 }
