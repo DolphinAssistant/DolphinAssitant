@@ -1,20 +1,20 @@
 @font-face {
-  font-family: nunito;
-  src: url(PlusJakartaSans-VariableFont_wght.ttf);
+  font-family: 'nunito';
+  src: url('PlusJakartaSans-VariableFont_wght.ttf');
 }
 
 body {
-  font-family: "nunito";
+  font-family: 'nunito', sans-serif;
   margin: 0;
   overflow-x: hidden;
   padding: 0;
-  background-color: #dabee6bb;
+  background: linear-gradient(90deg, #c3dee7, #42b6ff);
   color: #000000;
 }
 
 header {
-  background-color: #1e0035b6;
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.44);
+  color: #000000;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -73,6 +73,7 @@ nav ul li a:hover {
   display: flex;
   margin: 20px;
 }
+
 .menu-container {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 40px;
@@ -85,18 +86,20 @@ nav ul li a:hover {
 }
 
 .container-one {
-  width: 20%; /* Ancho del 40% para el primer contenedor */
+  width: 20%; /* Ancho del 20% para el primer contenedor */
   margin-right: 20px; /* Espacio entre los dos contenedores */
-  background-color: #d2a6e9b6; /* Fondo del contenedor */
+  background-color: #ffffffa2; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
+  border-radius: 10px;
 }
 
 .container-two {
-  width: 80%; /* Ancho del 55% para el segundo contenedor */
-  background-color: #f2deff9f; /* Fondo del contenedor */
+  width: 80%; /* Ancho del 80% para el segundo contenedor */
+  background-color: #fffeff9f; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
+  border-radius:10px;
 }
 
 .column1 {
@@ -113,25 +116,27 @@ nav ul li a:hover {
   width: 100%;
   padding: 20px;
 }
+
 .container-o {
   display: flex;
-  padding: 20px;;
+  padding: 20px;
   justify-content: space-around;
-  align-items: left;
+  align-items: flex-start;
   width: 100%;
 }
 
 .box {
   width: 30%;
-  padding:20px;
-  font-family: "nunito",sans-serif;
-  height: au;
-  background-color:  #d2a6e9b6;
+  padding: 20px;
+  font-family: 'nunito', sans-serif;
+  height: auto;
+  background-color: #d2a6e9b6;
   border: 1px solid #ccc;
   text-align: left;
-  border-color:  #d2a6e9b6;
+  border-color: #d2a6e9b6;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
+
 .column {
   flex: 1;
   margin: 0 10px;
@@ -145,7 +150,6 @@ nav ul li a:hover {
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .suggestion-bubble {
   position: fixed;
@@ -183,6 +187,7 @@ nav ul li a:hover {
   right: 10px;
   cursor: pointer;
 }
+
 footer {
   background-color: #000000;
   color: #fff;
@@ -190,8 +195,88 @@ footer {
   padding: 10px 0;
   width: 100%; /* Establecer el ancho al 100% */
   margin: 0; /* Eliminar márgenes */
-
   bottom: 0; /* Colocar el footer en la parte inferior de la ventana del navegador */
   left: 0; /* Asegurar que el footer comience desde el borde izquierdo */
   right: 0; /* Asegurar que el footer termine en el borde derecho */
+}
+
+/* Media queries para adaptabilidad */
+@media (max-width: 1200px) {
+  .container-pr {
+    flex-direction: column;
+  }
+
+  .container-one,
+  .container-two {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .box {
+    width: 45%; /* Ajustar el ancho de las cajas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .login-button-container {
+    padding: 10px;
+  }
+
+  .container-pr {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .container-one,
+  .container-two {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .box {
+    width: 100%; /* Ajustar el ancho de las cajas en pantallas pequeñas */
+    margin-bottom: 20px;
+  }
+
+  .suggestion-bubble {
+    width: 90%;
+    right: 5%;
+    bottom: 10px;
+    padding: 10px;
+  }
+
+  .suggestion-bubble p {
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .suggestion-bubble {
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+  }
+
+  .suggestion-bubble p {
+    font-size: 12px;
+  }
 }
