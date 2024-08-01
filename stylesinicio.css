@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('PlusJakartaSans-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'www';
+    src: url('Righteous-Regular.ttf');
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #c3dee7, #42b6ff);
+    color: #000;
+    overflow-x: hidden;
+}
+
+.login-button-container {
+    padding-right: 5px;
+    align-items: center;
+    padding: 5px; 
+}
+
+.login-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+header {
+    background-color: transparent;
+    color: #000000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.menu-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    padding: 5px 30px;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00d9ff;
+}
+.container-prin {
+    width: 100%;
+    height: 90vh; /* 100% de la altura del viewport */
+    display: flex;
+    justify-content: space-between; /* Asegura que el contenido y la imagen estén en lados opuestos */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding-left: 40px;
+    text-align: left;
+}
+
+.container-prin h1 {
+    font-size: 40px; /* Ajusta el tamaño del texto aquí */
+    font-family: "www", sans-serif;
+    margin: 0; /* Elimina márgenes predeterminados */
+}
+
+.container-prin img {
+    max-width: 45%; /* Ajusta el tamaño máximo de la imagen al 40% del contenedor */
+    height: auto;
+    margin-left: 10px; /* Añade espacio entre el texto y la imagen */
+    margin-right: 60px;
+}
+.suggestion-bubble {
+    position: fixed;
+    bottom: 20px; /* Posición en la parte inferior */
+    right: 20px; /* Posición en la parte derecha */
+    width: 300px; /* Ancho más grande */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px; /* Padding más grande */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.suggestion-bubble p {
+    margin: 0;
+    font-size: 16px; /* Tamaño de fuente más grande */
+}
+
+.suggestion-bubble a {
+    color: #00d9ff;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px; /* Más espacio entre el texto y el enlace */
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+.construction-popup {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra negra */
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.construction-content {
+    align-items: center;
+}
+
+.construction-icons {
+    max-width: 300px; /* Ajusta el tamaño de los iconos */
+    margin-bottom: 20px;
+}
+
+.construction-popup h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.close-button-construction {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
