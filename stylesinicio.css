@@ -195,44 +195,4 @@ footer {
     left: 0;
     right: 0;
 }
-/* Media queries para responsividad */
-@media (max-width: 768px) {
-    .container-prin {
-        padding: 10px;
-        text-align: center;
-    }
 
-    .menu-container {
-        padding: 5px 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container-prin h1 {
-        font-size: 1.5rem;
-    }
-
-    .suggestion-bubble, .construction-popup {
-        width: 90%;
-        bottom: 20px;
-        right: 5%;
-        padding: 10px;
-    }
-
-    .construction-popup {
-        width: 90%;
-        left: 5%;
-        top: 5%;
-    }
-
-    .suggestion-bubble p {
-        font-size: 14px;
-    }
-
-    .suggestion-bubble a {
-        font-size: 14px;
-    }
-}
