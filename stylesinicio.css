@@ -46,7 +46,6 @@ header {
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    
 }
 
 h1 {
@@ -60,11 +59,11 @@ h1 {
     padding: 5px 30px;
 }
 
-
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -81,36 +80,38 @@ nav ul li a {
 nav ul li a:hover {
     color: #00d9ff;
 }
+
 .container-prin {
     width: 100%;
-    height: 90vh; /* 100% de la altura del viewport */
+    height: auto; 
     display: flex;
-    justify-content: space-between; /* Asegura que el contenido y la imagen estén en lados opuestos */
-    align-items: center; /* Centra el contenido verticalmente */
-    padding-left: 40px;
-    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
 .container-prin h1 {
-    font-size: 40px; /* Ajusta el tamaño del texto aquí */
+    font-size: 2rem;
     font-family: "www", sans-serif;
-    margin: 0; /* Elimina márgenes predeterminados */
+    margin: 0 0 10px 0;
 }
 
 .container-prin img {
-    max-width: 45%; /* Ajusta el tamaño máximo de la imagen al 40% del contenedor */
+    max-width: 80%; 
     height: auto;
-    margin-left: 10px; /* Añade espacio entre el texto y la imagen */
-    margin-right: 60px;
+    margin-top: 20px;
 }
+
 .suggestion-bubble {
     position: fixed;
-    bottom: 20px; /* Posición en la parte inferior */
-    right: 20px; /* Posición en la parte derecha */
-    width: 300px; /* Ancho más grande */
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 20px; /* Padding más grande */
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -118,14 +119,14 @@ nav ul li a:hover {
 
 .suggestion-bubble p {
     margin: 0;
-    font-size: 16px; /* Tamaño de fuente más grande */
+    font-size: 16px;
 }
 
 .suggestion-bubble a {
     color: #00d9ff;
     text-decoration: none;
     display: block;
-    margin-top: 15px; /* Más espacio entre el texto y el enlace */
+    margin-top: 15px;
 }
 
 .close-button {
@@ -139,6 +140,7 @@ nav ul li a:hover {
     right: 10px;
     cursor: pointer;
 }
+
 .construction-popup {
     position: fixed;
     top: 10%;
@@ -149,7 +151,7 @@ nav ul li a:hover {
     color: #333;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra negra */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     z-index: 1001;
     display: flex;
     flex-direction: column;
@@ -163,13 +165,13 @@ nav ul li a:hover {
 }
 
 .construction-icons {
-    max-width: 300px; /* Ajusta el tamaño de los iconos */
+    max-width: 300px;
     margin-bottom: 20px;
 }
 
 .construction-popup h1 {
     margin: 0;
-    font-size: 30px;
+    font-size: 1.8rem;
 }
 
 .close-button-construction {
@@ -194,4 +196,46 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .container-prin {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .menu-container {
+        padding: 5px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-prin h1 {
+        font-size: 1.5rem;
+    }
+
+    .suggestion-bubble, .construction-popup {
+        width: 90%;
+        bottom: 20px;
+        right: 5%;
+        padding: 10px;
+    }
+
+    .construction-popup {
+        width: 90%;
+        left: 5%;
+        top: 5%;
+    }
+
+    .suggestion-bubble p {
+        font-size: 14px;
+    }
+
+    .suggestion-bubble a {
+        font-size: 14px;
+    }
 }
