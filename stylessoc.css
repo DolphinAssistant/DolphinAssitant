@@ -4,24 +4,24 @@
 }
 
   
-  body {
-    font-family: "nunito";
-    margin: 0;
-    overflow-x: hidden;
-    padding: 0;
-    background-color: #e8feffbb;
-    color: #ffffff;
-  }
-  
-  header {
-    background-color: #003435b6;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.342);
-    justify-content: space-between;
-  }
+body {
+  font-family: "nunito";
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  background: linear-gradient(90deg, #c3dee7, #42b6ff);
+  color: #000000;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.44);
+  color: #000000;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.342);
+  justify-content: space-between;
+}
   
   .login-button-container {
     padding-right: 5px;
@@ -78,14 +78,14 @@
   .container-one {
     width: 20%; /* Ancho del 40% para el primer contenedor */
     margin-right: 20px; /* Espacio entre los dos contenedores */
-    background-color: #a6e9e6b6; /* Fondo del contenedor */
+    background-color: #ffffffa2; /* Fondo del contenedor */
     padding: 20px;
     color: #000000; /* Color del texto */
   }
   
   .container-two {
     width: 80%; /* Ancho del 55% para el segundo contenedor */
-    background-color: #defdff9f; /* Fondo del contenedor */
+    background-color: #fffeff9f; /* Fondo del contenedor */
     padding: 20px;
     color: #000000; /* Color del texto */
   }
@@ -206,4 +206,185 @@
     left: 0; /* Asegurar que el footer comience desde el borde izquierdo */
     right: 0; /* Asegurar que el footer termine en el borde derecho */
   }
-  
+/* Media Queries para Pantallas Responsivas */
+
+/* Para pantallas de tamaño mediano (tabletas) */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .login-button-container {
+    padding: 10px 0;
+  }
+
+  .login-button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .container-pr {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .container-one, .container-two {
+    width: 100%;
+    margin: 0;
+  }
+
+  .column1 {
+    margin-bottom: 10px;
+  }
+
+  .container-o {
+    flex-direction: column;
+  }
+
+  .suggestion-bubble {
+    width: 90%;
+    right: 5%;
+    bottom: 10px;
+    padding: 15px;
+  }
+
+  .suggestion-bubble p {
+    font-size: 14px;
+  }
+
+  .suggestion-bubble a {
+    font-size: 14px;
+  }
+}
+
+/* Para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .login-button {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .container-pr {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .container-one, .container-two {
+    width: 100%;
+    margin: 0;
+  }
+
+  .column1 {
+    margin-bottom: 15px;
+  }
+
+  .suggestion-bubble {
+    width: 95%;
+    right: 2%;
+    bottom: 5px;
+    padding: 10px;
+  }
+
+  .suggestion-bubble p {
+    font-size: 12px;
+  }
+
+  .suggestion-bubble a {
+    font-size: 12px;
+  }
+
+  footer {
+    padding: 5px 0;
+  }
+}
+
+/* Para pantallas muy pequeñas (teléfonos móviles en orientación vertical) */
+@media (max-width: 480px) {
+  header {
+    padding: 5px;
+  }
+
+  .login-button {
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .container-pr {
+    margin: 5px 0;
+  }
+
+  .container-one, .container-two {
+    width: 100%;
+    margin: 0;
+  }
+
+  .column1 {
+    margin-bottom: 10px;
+  }
+
+  .suggestion-bubble {
+    width: 100%;
+    right: 0;
+    bottom: 5px;
+    padding: 10px;
+  }
+
+  .suggestion-bubble p {
+    font-size: 12px;
+  }
+
+  .suggestion-bubble a {
+    font-size: 12px;
+  }
+
+  footer {
+    padding: 5px 0;
+  }
+}
+ 
