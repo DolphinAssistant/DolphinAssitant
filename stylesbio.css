@@ -9,13 +9,13 @@ body {
   margin: 0;
   overflow-x: hidden;
   padding: 0;
-  background-color: #caffe2bb;
+  background: linear-gradient(90deg, #c3dee7, #42b6ff);
   color: #000000;
 }
 
 header {
-  background-color: #002206a2;
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.44);
+  color: #000000;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -78,14 +78,14 @@ nav ul li a:hover {
 .container-one {
   width: 20%; /* Ancho del 40% para el primer contenedor */
   margin-right: 20px; /* Espacio entre los dos contenedores */
-  background-color: #61b96b80; /* Fondo del contenedor */
+  background-color: #ffffffa2; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
 }
 
 .container-two {
   width: 80%; /* Ancho del 55% para el segundo contenedor */
-  background-color: #ffffff8b; /* Fondo del contenedor */
+  background-color: #fffeff9f; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
 }
@@ -177,4 +177,70 @@ footer {
   bottom: 0; /* Colocar el footer en la parte inferior de la ventana del navegador */
   left: 0; /* Asegurar que el footer comience desde el borde izquierdo */
   right: 0; /* Asegurar que el footer termine en el borde derecho */
+}
+@media (max-width: 1200px) {
+  .container-pr {
+    flex-direction: column;
+  }
+
+  .container-one, .container-two {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .column {
+    margin: 0 0 20px 0;
+  }
+
+  .suggestion-bubble {
+    width: 90%;
+    right: 5%;
+    bottom: 10px;
+  }
+
+  .container-one, .container-two {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  nav ul li {
+    margin-right: 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .suggestion-bubble p, .suggestion-bubble a {
+    font-size: 14px;
+  }
 }
