@@ -196,3 +196,74 @@ footer {
     right: 0;
 }
 
+@media (max-width: 768px) {
+    .container-prin {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .container-prin h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .container-prin img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .menu-container {
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .login-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .suggestion-bubble {
+        width: 90%;
+        bottom: 10px;
+        right: 10px;
+        padding: 15px;
+    }
+
+    .suggestion-bubble p {
+        font-size: 14px;
+    }
+
+    .close-button {
+        font-size: 18px;
+    }
+
+    .construction-popup {
+        width: 90%;
+        height: auto;
+        top: 5%;
+        left: 5%;
+        padding: 15px;
+    }
+
+    .construction-popup h1 {
+        font-size: 24px;
+    }
+
+    .construction-icons {
+        max-width: 80%;
+    }
+
+    .close-button-construction {
+        font-size: 20px;
+    }
+}
