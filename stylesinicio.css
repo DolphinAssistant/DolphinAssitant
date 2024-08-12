@@ -195,26 +195,3 @@ footer {
     left: 0;
     right: 0;
 }
-
-@media (max-width: 480px) {
-    .container-prin h1 {
-        font-size: 24px;
-    }
-
-    .container-prin img {
-        max-width: 90%;
-    }
-
-    .suggestion-bubble {
-        width: 250px;
-        padding: 15px;
-    }
-
-    .suggestion-bubble p {
-        font-size: 14px;
-    }
-
-    .suggestion-bubble a {
-        margin-top: 10px;
-    }
-}
