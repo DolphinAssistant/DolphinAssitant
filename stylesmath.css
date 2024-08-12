@@ -1,8 +1,8 @@
+/* Estilos generales */
 @font-face {
   font-family: nunito;
   src: url(PlusJakartaSans-VariableFont_wght.ttf);
 }
-
 
 body {
   font-family: "nunito";
@@ -76,7 +76,7 @@ nav ul li a:hover {
 }
 
 .container-one {
-  width: 20%; /* Ancho del 40% para el primer contenedor */
+  width: 20%; /* Ancho del 20% para el primer contenedor */
   margin-right: 20px; /* Espacio entre los dos contenedores */
   background-color: #2b6eff80; /* Fondo del contenedor */
   padding: 20px;
@@ -84,7 +84,7 @@ nav ul li a:hover {
 }
 
 .container-two {
-  width: 80%; /* Ancho del 55% para el segundo contenedor */
+  width: 80%; /* Ancho del 80% para el segundo contenedor */
   background-color: #2b6eff20; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
@@ -130,7 +130,6 @@ nav ul li a:hover {
   color: #000 !important; /* Asegurar que todos los elementos dentro del contenedor también sean negros */
 }
 
-
 .suggestion-bubble {
   position: fixed;
   bottom: 20px; /* Posición en la parte inferior */
@@ -167,6 +166,7 @@ nav ul li a:hover {
   right: 10px;
   cursor: pointer;
 }
+
 footer {
   background-color: #000000;
   color: #fff;
@@ -174,8 +174,45 @@ footer {
   padding: 10px 0;
   width: 100%; /* Establecer el ancho al 100% */
   margin: 0; /* Eliminar márgenes */
-
   bottom: 0; /* Colocar el footer en la parte inferior de la ventana del navegador */
   left: 0; /* Asegurar que el footer comience desde el borde izquierdo */
   right: 0; /* Asegurar que el footer termine en el borde derecho */
+}
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .login-button-container {
+    padding-right: 0;
+  }
+
+  .container-pr {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .container-one, .container-two {
+    width: 100%; /* Ancho completo para móviles */
+    margin-right: 0; /* Sin margen entre contenedores */
+  }
+
+  .column {
+    margin: 10px 0; /* Espacio entre columnas */
+  }
+
+  .suggestion-bubble {
+    width: 90%; /* Ancho más pequeño en móviles */
+    bottom: 10px; /* Ajustar la posición */
+    right: 10px; /* Ajustar la posición */
+    padding: 10px; /* Padding más pequeño */
+  }
+
+  .suggestion-bubble p {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+  }
 }
