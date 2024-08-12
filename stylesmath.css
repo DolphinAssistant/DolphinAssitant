@@ -180,7 +180,7 @@ footer {
 }
 
 /* Media Queries para móviles */
-@media (max-width: 768px) {
+@media (max-width: 460px) {
   header {
     flex-direction: column;
     align-items: flex-start;
