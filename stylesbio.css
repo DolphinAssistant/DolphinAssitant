@@ -178,18 +178,65 @@ footer {
   left: 0; /* Asegurar que el footer comience desde el borde izquierdo */
   right: 0; /* Asegurar que el footer termine en el borde derecho */
 }
-@media (max-width: 1200px) {
+
+/* Para pantallas de tamaño mediano (tabletas) */
+@media (max-width: 902px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .login-button-container {
+    padding: 10px 0;
+  }
+
+  .login-button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
   .container-pr {
     flex-direction: column;
+    margin: 10px;
   }
 
   .container-one, .container-two {
     width: 100%;
-    margin: 0 0 20px 0;
+    margin: 0;
+  }
+
+  .box {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
+/* Para pantallas pequeñas (teléfonos móviles) */
 @media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .login-button {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+
   h1 {
     font-size: 1.2rem;
   }
@@ -197,50 +244,105 @@ footer {
   nav ul {
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 
-  .container {
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .container-pr {
     flex-direction: column;
+    margin: 10px 0;
   }
 
-  .column {
-    margin: 0 0 20px 0;
+  .container-one, .container-two {
+    width: 100%;
+    margin: 0;
+  }
+
+  .box {
+    width: 100%;
+    margin-bottom: 15px;
   }
 
   .suggestion-bubble {
     width: 90%;
     right: 5%;
     bottom: 10px;
+    padding: 15px;
+  }
+
+  .suggestion-bubble p {
+    font-size: 14px;
+  }
+
+  .suggestion-bubble a {
+    font-size: 14px;
+  }
+}
+
+/* Para pantallas muy pequeñas (teléfonos móviles en orientación vertical) */
+@media (max-width: 400px) {
+  body {
+    max-width: 420px; /* Limitar el ancho del body en móviles */
+  }
+
+  header {
+    padding: 5px;
+  }
+
+  .column {
+    width: 100%;
+    margin: 0;
+  }
+  .login-button {
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .container-pr {
+    margin: 5px 0;
   }
 
   .container-one, .container-two {
     width: 100%;
+    margin: 0;
   }
-}
 
-@media (max-width: 480px) {
-  .login-button {
-    padding: 5px 10px;
+  .box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .suggestion-bubble {
+    width: 95%;
+    right: 2%;
+    bottom: 5px;
+    padding: 10px;
+  }
+
+  .suggestion-bubble p {
     font-size: 12px;
   }
 
-  .container {
-    padding: 10px;
+  .suggestion-bubble a {
+    font-size: 12px;
   }
 
-  .section {
-    padding: 10px;
-  }
-
-  nav ul li {
-    margin-right: 10px;
-  }
-
-  nav ul li a {
-    font-size: 14px;
-  }
-
-  .suggestion-bubble p, .suggestion-bubble a {
-    font-size: 14px;
+  footer {
+    padding: 5px 0;
   }
 }
