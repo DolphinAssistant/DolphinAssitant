@@ -180,7 +180,7 @@ footer {
 }
 
 /* Para pantallas de tamaño mediano (tabletas) */
-@media (max-width: 902px) {
+@media (max-width: 1039px) {
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -283,7 +283,7 @@ footer {
 }
 
 /* Para pantallas muy pequeñas (teléfonos móviles en orientación vertical) */
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   body {
     max-width: 420px; /* Limitar el ancho del body en móviles */
   }
