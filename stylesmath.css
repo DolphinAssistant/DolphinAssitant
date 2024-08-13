@@ -297,6 +297,10 @@ footer {
     padding: 5px;
   }
 
+  .column {
+    width: 100%;
+    margin: 0;
+  }
   .login-button {
     padding: 4px 6px;
     font-size: 10px;
