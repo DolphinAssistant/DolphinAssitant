@@ -68,63 +68,75 @@ nav ul li a {
 nav ul li a:hover {
   color: #00d9ff;
 }
-
-.menu-container {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 40px;
-  padding: 5px 30px;
-  color: #000 !important;
-}
-
-.menu-container * {
-  color: #000 !important;
-}
-
 .container-pr {
   display: flex;
   margin: 20px;
 }
 
 .container-one {
-  width: 20%;
-  margin-right: 20px;
-  background-color: #ffffffa2;
+  width: 20%; /* Ancho del 20% para el primer contenedor */
+  margin-right: 20px; /* Espacio entre los dos contenedores */
+  background-color: #2b6eff80; /* Fondo del contenedor */
   padding: 20px;
-  color: #000000;
-  border-radius: 10px;
+  color: #000000; /* Color del texto */
 }
 
 .container-two {
-  width: 80%;
-  background-color: #fffeff9f;
+  width: 80%; /* Ancho del 80% para el segundo contenedor */
+  background-color: #2b6eff20; /* Fondo del contenedor */
   padding: 20px;
-  color: #000000;
-  border-radius: 10px;
+  color: #000000; /* Color del texto */
 }
 
 .column1 {
-  background-color: transparent;
+  background-color: transparent; /* Fondo del contenedor */
   padding: 20px;
   margin-bottom: 20px;
-  color: #000000;
+  color: #000000; /* Color del texto */
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.column {
+  flex: 1;
+  margin: 0 10px;
+  text-align: left;
 }
 
 .section {
   text-align: center;
-  background-color: #02318fa6;
+  background-color: #02318fa6; /* Fondo del section */
   align-items: center;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.menu-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 5px 30px;
+  color: #000 !important; /* Forzar el color negro */
+  display: inline-block; /* Ajusta el tamaño del contenedor al contenido */
+}
+
+.menu-container * {
+  color: #000 !important; /* Asegurar que todos los elementos dentro del contenedor también sean negros */
+}
+
 .suggestion-bubble {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
+  bottom: 20px; /* Posición en la parte inferior */
+  right: 20px; /* Posición en la parte derecha */
+  width: 300px; /* Ancho más grande */
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 20px;
+  padding: 20px; /* Padding más grande */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -132,14 +144,14 @@ nav ul li a:hover {
 
 .suggestion-bubble p {
   margin: 0;
-  font-size: 16px;
+  font-size: 16px; /* Tamaño de fuente más grande */
 }
 
 .suggestion-bubble a {
   color: #00d9ff;
   text-decoration: none;
   display: block;
-  margin-top: 15px;
+  margin-top: 15px; /* Más espacio entre el texto y el enlace */
 }
 
 .close-button {
@@ -159,28 +171,11 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  width: 100%;
-  margin: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-/* Media queries para adaptabilidad */
-@media (max-width: 1200px) {
-  .container-pr {
-    flex-direction: column;
-  }
-
-  .container-one,
-  .container-two {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .box {
-    width: 45%;
-  }
+  width: 100%; /* Establecer el ancho al 100% */
+  margin: 0; /* Eliminar márgenes */
+  bottom: 0; /* Colocar el footer en la parte inferior de la ventana del navegador */
+  left: 0; /* Asegurar que el footer comience desde el borde izquierdo */
+  right: 0; /* Asegurar que el footer termine en el borde derecho */
 }
 
 @media (max-width: 768px) {
