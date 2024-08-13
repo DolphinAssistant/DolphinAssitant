@@ -8,13 +8,13 @@ body {
   margin: 0;
   overflow-x: hidden;
   padding: 0;
-  background: linear-gradient(90deg, #c3dee7, #42b6ff);
-  color: #000000;
+  background: linear-gradient(135deg, #a8c0ff, #3f4c6b); /* Fondo degradado */
+  color: #ffffff; /* Color del texto en general */
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.44);
-  color: #000000;
+  background-color: #003d66; /* Color de fondo del header */
+  color: #fff;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -29,29 +29,29 @@ header {
 }
 
 .login-button {
-  background-color: #007bff;
+  background-color: #0056b3; /* Color del botón */
   color: white;
   font-size: 14px;
   padding: 8px 12px;
   border: none;
-  border-radius: 50%;
+  border-radius: 50%; /* Crear un círculo perfecto */
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s; /* Cambio de color suave al pasar el cursor */
 }
 
 .login-button:hover {
-  background-color: #0056b3;
+  background-color: #003d66; /* Color más oscuro al pasar el cursor */
 }
 
 h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Ajustar tamaño de fuente para header */
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  display: flex;
+  display: flex; /* Mostrar elementos de la lista en línea */
 }
 
 nav ul li {
@@ -68,6 +68,7 @@ nav ul li a {
 nav ul li a:hover {
   color: #00d9ff;
 }
+
 .container-pr {
   display: flex;
   margin: 20px;
@@ -76,23 +77,23 @@ nav ul li a:hover {
 .container-one {
   width: 20%; /* Ancho del 20% para el primer contenedor */
   margin-right: 20px; /* Espacio entre los dos contenedores */
-  background-color: #fffff; /* Fondo del contenedor */
+  background-color: #0056b3; /* Fondo del contenedor */
   padding: 20px;
-  color: #000000; /* Color del texto */
+  color: #ffffff; /* Color del texto */
 }
 
 .container-two {
   width: 80%; /* Ancho del 80% para el segundo contenedor */
-  background-color: #ffff; /* Fondo del contenedor */
+  background-color: #003d66; /* Fondo del contenedor */
   padding: 20px;
-  color: #000000; /* Color del texto */
+  color: #ffffff; /* Color del texto */
 }
 
 .column1 {
   background-color: transparent; /* Fondo del contenedor */
   padding: 20px;
   margin-bottom: 20px;
-  color: #000000; /* Color del texto */
+  color: #ffffff; /* Color del texto */
 }
 
 .container {
@@ -111,7 +112,7 @@ nav ul li a:hover {
 
 .section {
   text-align: center;
-  background-color: #ffff /* Fondo del section */
+  background-color: #003d66; /* Fondo del section */
   align-items: center;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -167,7 +168,7 @@ nav ul li a:hover {
 }
 
 footer {
-  background-color: #000000;
+  background-color: #003d66; /* Color de fondo del footer */
   color: #fff;
   text-align: center;
   padding: 10px 0;
@@ -178,7 +179,8 @@ footer {
   right: 0; /* Asegurar que el footer termine en el borde derecho */
 }
 
-@media (max-width: 768px) {
+/* Media Queries para móviles */
+@media (max-width: 420px) {
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -186,7 +188,7 @@ footer {
   }
 
   .login-button-container {
-    padding: 10px;
+    padding-right: 0;
   }
 
   .container-pr {
@@ -194,50 +196,30 @@ footer {
     margin: 10px;
   }
 
-  .container-one,
-  .container-two {
-    width: 100%;
-    margin-right: 0;
+  .container-one, .container-two {
+    width: 100%; /* Ancho completo para móviles */
+    margin-right: 0; /* Sin margen entre contenedores */
   }
 
-  .box {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .suggestion-bubble {
-    width: 90%;
-    right: 5%;
-    bottom: 10px;
-    padding: 10px;
-  }
-
-  .suggestion-bubble p {
-    font-size: 14px;
-  }
-
-  footer {
-    padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.2rem;
-  }
-
-  .box {
-    width: 100%;
+  .column {
+    margin: 10px 0; /* Espacio entre columnas */
   }
 
   .suggestion-bubble {
-    width: 100%;
-    bottom: 0;
-    right: 0;
-    padding: 5px;
+    width: 90%; /* Ancho más pequeño en móviles */
+    bottom: 10px; /* Ajustar la posición */
+    right: 10px; /* Ajustar la posición */
+    padding: 10px; /* Padding más pequeño */
   }
 
   .suggestion-bubble p {
-    font-size: 12px;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+  }
+
+  .menu-container {
+    padding: 10px 20px; /* Ajustar el padding para móviles */
+    border-radius: 30px; /* Radio de borde más pequeño */
+    width: auto; /* Ajustar el ancho al contenido */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Sombra más ligera */
   }
 }
