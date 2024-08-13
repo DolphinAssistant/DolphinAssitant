@@ -74,21 +74,10 @@ nav ul li a:hover {
   margin: 20px;
 }
 
-.menu-container {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 40px;
-  padding: 5px 30px;
-  color: #000 !important; /* Forzar el color negro */
-}
-
-.menu-container * {
-  color: #000 !important; /* Asegurar que todos los elementos dentro del contenedor también sean negros */
-}
-
 .container-one {
   width: 20%; /* Ancho del 20% para el primer contenedor */
   margin-right: 20px; /* Espacio entre los dos contenedores */
-  background-color: #ffffffa2; /* Fondo del contenedor */
+  background-color: #ffffff; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
   border-radius: 10px;
@@ -96,10 +85,10 @@ nav ul li a:hover {
 
 .container-two {
   width: 80%; /* Ancho del 80% para el segundo contenedor */
-  background-color: #fffeff9f; /* Fondo del contenedor */
+  background-color: #ffffff; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 .column1 {
@@ -117,26 +106,6 @@ nav ul li a:hover {
   padding: 20px;
 }
 
-.container-o {
-  display: flex;
-  padding: 20px;
-  justify-content: space-around;
-  align-items: flex-start;
-  width: 100%;
-}
-
-.box {
-  width: 30%;
-  padding: 20px;
-  font-family: 'nunito', sans-serif;
-  height: auto;
-  background-color: #d2a6e9b6;
-  border: 1px solid #ccc;
-  text-align: left;
-  border-color: #d2a6e9b6;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
-
 .column {
   flex: 1;
   margin: 0 10px;
@@ -145,10 +114,21 @@ nav ul li a:hover {
 
 .section {
   text-align: center;
-  background-color: #02318fa6;
+  background-color: #ffffff; /* Fondo blanco del section */
   align-items: center;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 5px 30px;
+  color: #000 !important; /* Forzar el color negro */
+}
+
+.menu-container * {
+  color: #000 !important; /* Asegurar que todos los elementos dentro del contenedor también sean negros */
 }
 
 .suggestion-bubble {
