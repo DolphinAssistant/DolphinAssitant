@@ -1,10 +1,11 @@
 @font-face {
-  font-family: 'nunito';
-  src: url('PlusJakartaSans-VariableFont_wght.ttf');
+  font-family: nunito;
+  src: url(PlusJakartaSans-VariableFont_wght.ttf);
 }
 
+
 body {
-  font-family: 'nunito', sans-serif;
+  font-family: "nunito";
   margin: 0;
   overflow-x: hidden;
   padding: 0;
@@ -75,7 +76,7 @@ nav ul li a:hover {
 }
 
 .container-one {
-  width: 20%; /* Ancho del 20% para el primer contenedor */
+  width: 20%; /* Ancho del 40% para el primer contenedor */
   margin-right: 20px; /* Espacio entre los dos contenedores */
   background-color: #ffffffa2; /* Fondo del contenedor */
   padding: 20px;
@@ -84,7 +85,7 @@ nav ul li a:hover {
 }
 
 .container-two {
-  width: 80%; /* Ancho del 80% para el segundo contenedor */
+  width: 80%; /* Ancho del 55% para el segundo contenedor */
   background-color: #fffeff9f; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
@@ -114,7 +115,7 @@ nav ul li a:hover {
 
 .section {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.44); /* Fondo con la misma opacidad que el header */
+  background-color: #02318fa6;
   align-items: center;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -130,6 +131,7 @@ nav ul li a:hover {
 .menu-container * {
   color: #000 !important; /* Asegurar que todos los elementos dentro del contenedor también sean negros */
 }
+
 
 .suggestion-bubble {
   position: fixed;
@@ -167,7 +169,6 @@ nav ul li a:hover {
   right: 10px;
   cursor: pointer;
 }
-
 footer {
   background-color: #000000;
   color: #fff;
@@ -175,29 +176,15 @@ footer {
   padding: 10px 0;
   width: 100%; /* Establecer el ancho al 100% */
   margin: 0; /* Eliminar márgenes */
+
   bottom: 0; /* Colocar el footer en la parte inferior de la ventana del navegador */
   left: 0; /* Asegurar que el footer comience desde el borde izquierdo */
   right: 0; /* Asegurar que el footer termine en el borde derecho */
 }
+/* Media Queries para Pantallas Responsivas */
 
-/* Media queries para adaptabilidad */
-@media (max-width: 1200px) {
-  .container-pr {
-    flex-direction: column;
-  }
-
-  .container-one,
-  .container-two {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .box {
-    width: 45%; /* Ajustar el ancho de las cajas en pantallas más pequeñas */
-  }
-}
-
-@media (max-width: 768px) {
+/* Para pantallas de tamaño mediano (tabletas) */
+@media (max-width: 992px) {
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -205,7 +192,26 @@ footer {
   }
 
   .login-button-container {
-    padding: 10px;
+    padding: 10px 0;
+  }
+
+  .login-button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
   }
 
   .container-pr {
@@ -213,50 +219,126 @@ footer {
     margin: 10px;
   }
 
-  .container-one,
-  .container-two {
+  .container-one, .container-two {
     width: 100%;
-    margin-right: 0;
+    margin: 0;
   }
 
   .box {
-    width: 100%; /* Ajustar el ancho de las cajas en pantallas pequeñas */
+    width: 100%;
     margin-bottom: 20px;
+  }
+}
+
+/* Para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .login-button {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .container-pr {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .container-one, .container-two {
+    width: 100%;
+    margin: 0;
+  }
+
+  .box {
+    width: 100%;
+    margin-bottom: 15px;
   }
 
   .suggestion-bubble {
     width: 90%;
     right: 5%;
     bottom: 10px;
-    padding: 10px;
+    padding: 15px;
   }
 
   .suggestion-bubble p {
     font-size: 14px;
   }
 
-  footer {
-    padding: 15px;
+  .suggestion-bubble a {
+    font-size: 14px;
   }
 }
 
+/* Para pantallas muy pequeñas (teléfonos móviles en orientación vertical) */
 @media (max-width: 480px) {
+  header {
+    padding: 5px;
+  }
+
+  .login-button {
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+
   h1 {
-    font-size: 1.2rem; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
+    font-size: 1.1rem;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .container-pr {
+    margin: 5px 0;
+  }
+
+  .container-one, .container-two {
+    width: 100%;
+    margin: 0;
   }
 
   .box {
     width: 100%;
+    margin-bottom: 10px;
   }
 
   .suggestion-bubble {
-    width: 100%;
-    bottom: 0;
-    right: 0;
-    padding: 5px;
+    width: 95%;
+    right: 2%;
+    bottom: 5px;
+    padding: 10px;
   }
 
   .suggestion-bubble p {
     font-size: 12px;
+  }
+
+  .suggestion-bubble a {
+    font-size: 12px;
+  }
+
+  footer {
+    padding: 5px 0;
   }
 }
