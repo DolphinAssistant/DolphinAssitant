@@ -25,33 +25,33 @@ header {
 .login-button-container {
   padding-right: 5px;
   align-items: center;
-  padding: 5px; 
+  padding: 5px;
 }
 
 .login-button {
-  background-color: #007bff; /* Color del botón */
+  background-color: #007bff;
   color: white;
   font-size: 14px;
   padding: 8px 12px;
   border: none;
-  border-radius: 50%; /* Crear un círculo perfecto */
+  border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s; /* Cambio de color suave al pasar el cursor */
+  transition: background-color 0.3s;
 }
 
 .login-button:hover {
-  background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+  background-color: #0056b3;
 }
 
 h1 {
   margin: 0;
-  font-size: 1.5rem; /* Ajustar tamaño de fuente para header más pequeño */
+  font-size: 1.5rem;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  display: flex; /* Mostrar elementos de la lista en línea */
+  display: flex;
 }
 
 nav ul li {
@@ -69,48 +69,62 @@ nav ul li a:hover {
   color: #00d9ff;
 }
 
+.menu-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 5px 30px;
+  color: #000 !important;
+}
+
+.menu-container * {
+  color: #000 !important;
+}
+
 .container-pr {
   display: flex;
   margin: 20px;
 }
 
-.menu-container {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 40px;
-  padding: 5px 30px;
-  color: #000 !important; /* Forzar el color negro */
-}
-
-.menu-container * {
-  color: #000 !important; /* Asegurar que todos los elementos dentro del contenedor también sean negros */
-}
-
 .container-one {
-  width: 20%; /* Ancho del 20% para el primer contenedor */
-  margin-right: 20px; /* Espacio entre los dos contenedores */
-  background-color: #ffffffa2; /* Fondo del contenedor */
+  width: 20%;
+  margin-right: 20px;
+  background-color: #ffffffa2;
   padding: 20px;
-  color: #000000; /* Color del texto */
+  color: #000000;
   border-radius: 10px;
 }
 
 .container-two {
-  width: 80%; /* Ancho del 80% para el segundo contenedor */
-  background-color: #fffeff9f; /* Fondo del contenedor */
+  width: 80%;
+  background-color: #fffeff9f;
   padding: 20px;
-  color: #000000; /* Color del texto */
-  border-radius:10px;
+  color: #000000;
+  border-radius: 10px;
 }
 
+.column1 {
+  background-color: transparent;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #000000;
+}
 
-suggestion-bubble {
+.section {
+  text-align: center;
+  background-color: #02318fa6;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-bubble {
   position: fixed;
-  bottom: 20px; /* Posición en la parte inferior */
-  right: 20px; /* Posición en la parte derecha */
-  width: 300px; /* Ancho más grande */
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 20px; /* Padding más grande */
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -118,14 +132,14 @@ suggestion-bubble {
 
 .suggestion-bubble p {
   margin: 0;
-  font-size: 16px; /* Tamaño de fuente más grande */
+  font-size: 16px;
 }
 
 .suggestion-bubble a {
   color: #00d9ff;
   text-decoration: none;
   display: block;
-  margin-top: 15px; /* Más espacio entre el texto y el enlace */
+  margin-top: 15px;
 }
 
 .close-button {
@@ -145,11 +159,11 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  width: 100%; /* Establecer el ancho al 100% */
-  margin: 0; /* Eliminar márgenes */
-  bottom: 0; /* Colocar el footer en la parte inferior de la ventana del navegador */
-  left: 0; /* Asegurar que el footer comience desde el borde izquierdo */
-  right: 0; /* Asegurar que el footer termine en el borde derecho */
+  width: 100%;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /* Media queries para adaptabilidad */
@@ -165,7 +179,7 @@ footer {
   }
 
   .box {
-    width: 45%; /* Ajustar el ancho de las cajas en pantallas más pequeñas */
+    width: 45%;
   }
 }
 
@@ -192,7 +206,7 @@ footer {
   }
 
   .box {
-    width: 100%; /* Ajustar el ancho de las cajas en pantallas pequeñas */
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -214,7 +228,7 @@ footer {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.2rem; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
+    font-size: 1.2rem;
   }
 
   .box {
@@ -232,5 +246,3 @@ footer {
     font-size: 12px;
   }
 }
-
-
