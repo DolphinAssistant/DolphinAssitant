@@ -179,16 +179,17 @@ footer {
   right: 0; /* Asegurar que el footer termine en el borde derecho */
 }
 
-/* Para pantallas de tamaño mediano (tabletas) */
-@media (max-width: 1039px) {
+
+/* Para pantallas grandes (tabletas en orientación horizontal) */
+@media (max-width: 1024px) {
   header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px;
   }
 
   .login-button-container {
-    padding: 10px 0;
+    padding: 5px;
   }
 
   .login-button {
@@ -201,22 +202,20 @@ footer {
   }
 
   nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
+    flex-direction: row;
   }
 
   nav ul li {
-    margin: 10px 0;
+    margin-right: 20px;
   }
 
   .container-pr {
-    flex-direction: column;
-    margin: 10px;
+    flex-direction: row;
+    margin: 20px;
   }
 
   .container-one, .container-two {
-    width: 100%;
+    width: auto;
     margin: 0;
   }
 
@@ -226,9 +225,11 @@ footer {
   }
 }
 
-/* Para pantallas pequeñas (teléfonos móviles) */
+/* Para pantallas de tamaño mediano (tabletas en orientación vertical) */
 @media (max-width: 768px) {
   header {
+    flex-direction: column;
+    align-items: flex-start;
     padding: 10px;
   }
 
@@ -285,17 +286,14 @@ footer {
 /* Para pantallas muy pequeñas (teléfonos móviles en orientación vertical) */
 @media (max-width: 420px) {
   body {
-    max-width: 420px; /* Limitar el ancho del body en móviles */
+    max-width: 420px;
   }
 
   header {
     padding: 5px;
+    flex-direction: column;
   }
 
-  .column {
-    width: 100%;
-    margin: 0;
-  }
   .login-button {
     padding: 4px 6px;
     font-size: 10px;
