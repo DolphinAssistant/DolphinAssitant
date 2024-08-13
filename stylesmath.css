@@ -287,7 +287,7 @@ footer {
 }
 
 /* Para pantallas muy pequeñas (teléfonos móviles en orientación vertical) */
-@media (max-width: 480px) {
+@media (max-width: 390px) {
   header {
     padding: 5px;
   }
@@ -314,7 +314,7 @@ footer {
   }
 
   .container-one, .container-two {
-    width: 100%;
+    width: 460px;
     margin: 0;
   }
 
