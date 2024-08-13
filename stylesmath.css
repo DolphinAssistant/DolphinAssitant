@@ -77,7 +77,7 @@ nav ul li a:hover {
 .container-one {
   width: 20%; /* Ancho del 20% para el primer contenedor */
   margin-right: 20px; /* Espacio entre los dos contenedores */
-  background-color: #fffeff9f; /* Fondo del contenedor */
+  background-color: rgba(255, 255, 255, 0.44); /* Fondo con la misma opacidad que el header */
   padding: 20px;
   color: #000000; /* Color del texto */
   border-radius: 10px;
@@ -85,7 +85,7 @@ nav ul li a:hover {
 
 .container-two {
   width: 80%; /* Ancho del 80% para el segundo contenedor */
-  background-color: #fffeff9f; /* Fondo del contenedor */
+  background-color: rgba(255, 255, 255, 0.44); /* Fondo con la misma opacidad que el header */
   padding: 20px;
   color: #000000; /* Color del texto */
   border-radius: 10px;
@@ -114,7 +114,7 @@ nav ul li a:hover {
 
 .section {
   text-align: center;
-  background-color:#fffeff9f; /* Fondo blanco del section */
+  background-color: rgba(255, 255, 255, 0.44); /* Fondo con la misma opacidad que el header */
   align-items: center;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
