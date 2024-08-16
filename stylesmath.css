@@ -60,30 +60,36 @@ nav ul li a:hover {
 }
 
 .container-pr {
-  display: flex;
+  display: flex; /* Asegura que los contenedores hijos estén en línea */
   margin: 20px;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
 }
 
 .container-one {
-  width: 20%; /* Ancho del 20% para el primer contenedor */
+  flex: 1; /* Se expande para llenar el espacio disponible */
+  max-width: 20%; /* Controla el ancho máximo del contenedor */
   margin-right: 20px; /* Espacio entre los dos contenedores */
   background-color: #2b6eff80; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
 }
 
 .container-two {
-  width: 80%; /* Ancho del 80% para el segundo contenedor */
+  flex: 1; /* Se expande para llenar el espacio disponible */
+  max-width: 80%; /* Controla el ancho máximo del contenedor */
   background-color: #2b6eff20; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
 }
 
+
 .column1 {
-  background-color: transparent; /* Fondo del contenedor */
+  background-color: transparent;
   padding: 20px;
   margin-bottom: 20px;
-  color: #000000; /* Color del texto */
+  color: #000000;
 }
 
 .container {
@@ -107,6 +113,7 @@ nav ul li a:hover {
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 .menu-container {
   display: none;
   background-color: rgba(255, 255, 255, 0.8);
@@ -131,7 +138,6 @@ nav ul li a:hover {
   transform: translateY(-50%);
   display: none; /* Oculta el botón por defecto */
 }
-
 /* Menú de navegación */
 .menu-container {
   display: flex;
