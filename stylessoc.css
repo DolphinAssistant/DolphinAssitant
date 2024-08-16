@@ -3,7 +3,6 @@
   src: url(PlusJakartaSans-VariableFont_wght.ttf);
 }
 
-  
 body {
   font-family: "nunito";
   margin: 0;
@@ -13,6 +12,7 @@ body {
   color: #000000;
 }
 
+/* Estilos para el header */
 header {
   background-color: rgba(255, 255, 255, 0.44);
   color: #000000;
@@ -21,143 +21,152 @@ header {
   align-items: center;
   box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.342);
   justify-content: space-between;
+  position: relative; /* Añadido para el botón de menú */
 }
-  
-  .login-button-container {
-    padding-right: 5px;
-    align-items: center;
-    padding: 5px; 
-  }
-  
-  .login-button {
-    background-color: #007bff; /* Color del botón */
-    color: white;
-    font-size: 14px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 50%; /* Crear un círculo perfecto */
-    cursor: pointer;
-    transition: background-color 0.3s; /* Cambio de color suave al pasar el cursor */
-  }
-  
-  .login-button:hover {
-    background-color: #0056b3; /* Color más oscuro al pasar el cursor */
-  }
-  
-  h1 {
-    margin: 0;
-    font-size: 1.5rem; /* Ajustar tamaño de fuente para header más pequeño */
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex; /* Mostrar elementos de la lista en línea */
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #00d9ff;
-  }
-  
-  .container-pr {
-    display: flex;
-    margin: 20px;
-  }
-  
-  .container-one {
-    width: 20%; /* Ancho del 40% para el primer contenedor */
-    margin-right: 20px; /* Espacio entre los dos contenedores */
-    background-color: #ffffffa2; /* Fondo del contenedor */
-    padding: 20px;
-    color: #000000; /* Color del texto */
-  }
-  
-  .container-two {
-    width: 80%; /* Ancho del 55% para el segundo contenedor */
-    background-color: #fffeff9f; /* Fondo del contenedor */
-    padding: 20px;
-    color: #000000; /* Color del texto */
-  }
-  
-  .column1 {
-    background-color: transparent; /* Fondo del contenedor */
-    padding: 20px;
-    margin-bottom: 20px;
-    color: #000000; /* Color del texto */
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-  }
-  .container-o {
-    display: flex;
-    padding: 20px;;
-    justify-content: space-around;
-    align-items: left;
-    width: 100%;
-  }
-  .menu-container {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 40px;
-    padding: 5px 30px;
-    color: #000 !important; /* Forzar el color negro */
-  }
-  
-  .menu-container * {
-    color: #000 !important; /* Asegurar que todos los elementos dentro del contenedor también sean negros */
-  }
-  
-  .column {
-    flex: 1;
-    margin: 0 10px;
-    text-align: left;
-  }
-  
-  .section {
-    text-align: center;
-    background-color: #02318fa6;
-    align-items: center;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    border-radius: 1px solid #ddd;
-  }
-  
-  th,
-  td {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-    /* style the table header */
-    font-weight: bold;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-    /* alternate row colors */
-  }
-  
+
+/* Estilo para el contenedor del header */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00d9ff;
+}
+
+.container-pr {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.container-one {
+  flex: 1 1 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: #ffffffa2;
+  padding: 20px;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.container-two {
+  flex: 1 1 100%;
+  max-width: 100%;
+  background-color: #fffeff9f;
+  padding: 20px;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.column1 {
+  background-color: transparent;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.column {
+  flex: 1;
+  margin: 0 10px;
+  text-align: left;
+}
+
+.section {
+  text-align: center;
+  background-color: #02318fa6;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 5px 30px;
+  color: #000 !important;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Botón de menú */
+.toggle-header {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute; /* Posicionar el botón en el lado derecho */
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none; /* Oculta el botón por defecto */
+}
+
+/* Menú de navegación */
+.menu-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 5px 30px;
+  color: #000 !important;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.menu-container ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.menu-container ul li {
+  margin-right: 20px;
+}
+
+.menu-container ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu-container ul li a:hover {
+  color: #00d9ff;
+}
 .suggestion-bubble {
   position: fixed;
   bottom: 20px; /* Posición en la parte inferior */
@@ -183,208 +192,82 @@ header {
   margin-top: 15px; /* Más espacio entre el texto y el enlace */
 }
 
-.close-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  cursor: pointer;
-}
-  footer {
-    background-color: #000000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%; /* Establecer el ancho al 100% */
-    margin: 0; /* Eliminar márgenes */
-  
-    bottom: 0; /* Colocar el footer en la parte inferior de la ventana del navegador */
-    left: 0; /* Asegurar que el footer comience desde el borde izquierdo */
-    right: 0; /* Asegurar que el footer termine en el borde derecho */
+/* Estilos del menú en dispositivos grandes */
+@media (min-width: 992px) {
+  .toggle-header {
+    display: none; /* Oculta el botón en pantallas grandes */
   }
-/* Media Queries para Pantallas Responsivas */
+  .menu-container {
+    display: flex; /* Muestra el menú por defecto en pantallas grandes */
+    flex-direction: row;
+  }
+  nav ul {
+    display: flex;
+  }
+}
 
-/* Para pantallas de tamaño mediano (tabletas) */
+/* Estilos para dispositivos móviles */
 @media (max-width: 992px) {
+  .menu-container {
+    display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+  }
+
+  .menu-container.show {
+    display: flex; /* Muestra el menú cuando la clase show está activa */
+  }
+
+  .toggle-header {
+    display: block; /* Muestra el botón en pantallas pequeñas */
+  }
+
+  /* Ajusta el padding del header en dispositivos móviles */
   header {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 10px;
   }
 
-  .login-button-container {
-    padding: 10px 0;
-  }
-
-  .login-button {
-    font-size: 12px;
-    padding: 6px 10px;
+  .header-container {
+    flex-direction: row; /* Cambia a fila para que el botón esté al lado derecho */
+    align-items: center;
+    justify-content: space-between;
   }
 
   h1 {
     font-size: 1.3rem;
   }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .container-pr {
-    flex-direction: column;
-    margin: 10px;
-  }
-
-  .container-one, .container-two {
-    width: 100%;
-    margin: 0;
-  }
-
-  .column1 {
-    margin-bottom: 10px;
-  }
-
-  .container-o {
-    flex-direction: column;
-  }
-
-  .suggestion-bubble {
-    width: 90%;
-    right: 5%;
-    bottom: 10px;
-    padding: 15px;
-  }
-
-  .suggestion-bubble p {
-    font-size: 14px;
-  }
-
-  .suggestion-bubble a {
-    font-size: 14px;
-  }
 }
 
-/* Para pantallas pequeñas (teléfonos móviles) */
+/* Estilos para pantallas muy pequeñas */
 @media (max-width: 768px) {
-  header {
-    padding: 10px;
+  .toggle-header {
+    font-size: 20px;
   }
+  .container-two{
+    width:80%;
+  }
+  .menu-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    padding: 0px 30px;
+    color: #000 !important;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-  .login-button {
-    padding: 5px 8px;
-    font-size: 10px;
-  }
+/* Cambiar la dirección del flex a columna */
+.menu-container ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Cambiar de fila a columna */
+}
+
+/* Añadir margen entre los elementos del menú */
+.menu-container ul li {
+    margin-bottom: 10px; /* Añadir espacio entre elementos */
+}
 
   h1 {
     font-size: 1.2rem;
   }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .container-pr {
-    flex-direction: column;
-    margin: 10px 0;
-  }
-
-  .container-one, .container-two {
-    width: 100%;
-    margin: 0;
-  }
-
-  .column1 {
-    margin-bottom: 15px;
-  }
-
-  .suggestion-bubble {
-    width: 95%;
-    right: 2%;
-    bottom: 5px;
-    padding: 10px;
-  }
-
-  .suggestion-bubble p {
-    font-size: 12px;
-  }
-
-  .suggestion-bubble a {
-    font-size: 12px;
-  }
-
-  footer {
-    padding: 5px 0;
-  }
+  
 }
-
-/* Para pantallas muy pequeñas (teléfonos móviles en orientación vertical) */
-@media (max-width: 480px) {
-  header {
-    padding: 5px;
-  }
-
-  .login-button {
-    padding: 4px 6px;
-    font-size: 10px;
-  }
-
-  h1 {
-    font-size: 1.1rem;
-  }
-
-  nav ul {
-    padding: 0;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  .container-pr {
-    margin: 5px 0;
-  }
-
-  .container-one, .container-two {
-    width: 100%;
-    margin: 0;
-  }
-
-  .column1 {
-    margin-bottom: 10px;
-  }
-
-  .suggestion-bubble {
-    width: 100%;
-    right: 0;
-    bottom: 5px;
-    padding: 10px;
-  }
-
-  .suggestion-bubble p {
-    font-size: 12px;
-  }
-
-  .suggestion-bubble a {
-    font-size: 12px;
-  }
-
-  footer {
-    padding: 5px 0;
-  }
-}
- 
