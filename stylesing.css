@@ -10,6 +10,7 @@ body {
   padding: 0;
   background: linear-gradient(90deg, #c3dee7, #42b6ff);
   color: #000000;
+  overflow-x:hiden;
 }
 
 /* Estilos para el header */
