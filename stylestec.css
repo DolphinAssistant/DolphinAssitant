@@ -10,7 +10,6 @@ body {
   padding: 0;
   background: linear-gradient(90deg, #c3dee7, #42b6ff);
   color: #000000;
-  overflow-x:hidden;
 }
 
 /* Estilos para el header */
@@ -22,7 +21,7 @@ header {
   align-items: center;
   box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.342);
   justify-content: space-between;
-  position: relative; /* Añadido para el botón de menú */
+  position: relative;
 }
 
 /* Estilo para el contenedor del header */
@@ -59,55 +58,35 @@ nav ul li a:hover {
   color: #00d9ff;
 }
 
+/* Contenedores principales */
+
 .container-pr {
   display: flex;
-  flex-wrap: wrap;
   margin: 20px;
 }
 
 .container-one {
-  flex: 1 1 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
-  background-color: #ffffffa2;
+  width: 20%; /* Ancho del 40% para el primer contenedor */
+  margin-right: 20px; /* Espacio entre los dos contenedores */
+  background-color: #ffffff96; /* Fondo del contenedor */
   padding: 20px;
-  color: #000000;
-  border-radius: 10px;
+  border-radius: 20px;
+  color: #000000; /* Color del texto */
 }
 
 .container-two {
-  flex: 1 1 100%;
-  max-width: 100%;
-  background-color: #fffeff9f;
+  width: 80%; /* Ancho del 55% para el segundo contenedor */
+  background-color: #ffffff9f; /* Fondo del contenedor */
   padding: 20px;
-  color: #000000;
-  border-radius: 10px;
+  border-radius: 20px;
+  color: #000000; /* Color del texto */
 }
 
-.column1 {
-  background-color: transparent;
-  padding: 20px;
-  margin-bottom: 20px;
-  color: #000000;
-}
 
-.container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.column {
-  flex: 1;
-  margin: 0 10px;
-  text-align: left;
-}
-
+/* Otros estilos */
 .section {
   text-align: center;
-  background-color: #02318fa6;
+  background-color: #ffffffa6;
   align-items: center;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -131,11 +110,11 @@ nav ul li a:hover {
   font-size: 24px;
   cursor: pointer;
   padding: 10px;
-  position: absolute; /* Posicionar el botón en el lado derecho */
+  position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  display: none; /* Oculta el botón por defecto */
+  display: none;
 }
 
 /* Menú de navegación */
@@ -148,6 +127,7 @@ nav ul li a:hover {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .menu-container ul {
   list-style: none;
   padding: 0;
@@ -168,6 +148,7 @@ nav ul li a:hover {
 .menu-container ul li a:hover {
   color: #00d9ff;
 }
+
 .suggestion-bubble {
   position: fixed;
   bottom: 20px; /* Posición en la parte inferior */
@@ -242,9 +223,24 @@ nav ul li a:hover {
   .toggle-header {
     font-size: 20px;
   }
-  .container-two{
-    width:80%;
+
+  .container-pr {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para apilar los contenedores */
   }
+
+  .container-one, .container-two {
+    width: 90%; /* Ambos contenedores ocupan el ancho completo */
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-bottom: 20px; /* Espacio entre los contenedores cuando están apilados */
+    background-color: #ffffffa2;
+    border-radius: 10px;
+  }
+
+  .container-two {
+    background-color: #fffeff9f;
+  }
+
   .menu-container {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 40px;
@@ -252,23 +248,13 @@ nav ul li a:hover {
     color: #000 !important;
     flex-direction: column;
     align-items: flex-start;
-}
-
-/* Cambiar la dirección del flex a columna */
-.menu-container ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Cambiar de fila a columna */
-}
-
-/* Añadir margen entre los elementos del menú */
-.menu-container ul li {
-    margin-bottom: 10px; /* Añadir espacio entre elementos */
-}
-
-  h1 {
-    font-size: 1.2rem;
   }
-  
+
+  .menu-container ul {
+    flex-direction: column;
+  }
+
+  .menu-container ul li {
+    margin-bottom: 10px; /* Añadir espacio entre elementos */
+  }
 }
