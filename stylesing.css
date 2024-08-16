@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'nunito';
-  src: url('PlusJakartaSans-VariableFont_wght.ttf');
+  font-family: nunito;
+  src: url(PlusJakartaSans-VariableFont_wght.ttf);
 }
 
 body {
-  font-family: 'nunito', sans-serif;
+  font-family: "nunito";
   margin: 0;
   overflow-x: hidden;
   padding: 0;
@@ -12,6 +12,7 @@ body {
   color: #000000;
 }
 
+/* Estilos para el header */
 header {
   background-color: rgba(255, 255, 255, 0.44);
   color: #000000;
@@ -20,38 +21,26 @@ header {
   align-items: center;
   box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.342);
   justify-content: space-between;
+  position: relative; /* Añadido para el botón de menú */
 }
 
-.login-button-container {
-  padding-right: 5px;
+/* Estilo para el contenedor del header */
+.header-container {
+  display: flex;
   align-items: center;
-  padding: 5px; 
-}
-
-.login-button {
-  background-color: #007bff; /* Color del botón */
-  color: white;
-  font-size: 14px;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 50%; /* Crear un círculo perfecto */
-  cursor: pointer;
-  transition: background-color 0.3s; /* Cambio de color suave al pasar el cursor */
-}
-
-.login-button:hover {
-  background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+  justify-content: space-between;
+  width: 100%;
 }
 
 h1 {
   margin: 0;
-  font-size: 1.5rem; /* Ajustar tamaño de fuente para header más pequeño */
+  font-size: 1.5rem;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  display: flex; /* Mostrar elementos de la lista en línea */
+  display: flex;
 }
 
 nav ul li {
@@ -71,42 +60,34 @@ nav ul li a:hover {
 
 .container-pr {
   display: flex;
+  flex-wrap: wrap;
   margin: 20px;
 }
 
-.menu-container {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 40px;
-  padding: 5px 30px;
-  color: #000 !important; /* Forzar el color negro */
-}
-
-.menu-container * {
-  color: #000 !important; /* Asegurar que todos los elementos dentro del contenedor también sean negros */
-}
-
 .container-one {
-  width: 20%; /* Ancho del 20% para el primer contenedor */
-  margin-right: 20px; /* Espacio entre los dos contenedores */
-  background-color: #ffffffa2; /* Fondo del contenedor */
+  flex: 1 1 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: #ffffffa2;
   padding: 20px;
-  color: #000000; /* Color del texto */
+  color: #000000;
   border-radius: 10px;
 }
 
 .container-two {
-  width: 80%; /* Ancho del 80% para el segundo contenedor */
-  background-color: #fffeff9f; /* Fondo del contenedor */
+  flex: 1 1 100%;
+  max-width: 100%;
+  background-color: #fffeff9f;
   padding: 20px;
-  color: #000000; /* Color del texto */
-  border-radius:10px;
+  color: #000000;
+  border-radius: 10px;
 }
 
 .column1 {
-  background-color: transparent; /* Fondo del contenedor */
+  background-color: transparent;
   padding: 20px;
   margin-bottom: 20px;
-  color: #000000; /* Color del texto */
+  color: #000000;
 }
 
 .container {
@@ -115,26 +96,6 @@ nav ul li a:hover {
   align-items: center;
   width: 100%;
   padding: 20px;
-}
-
-.container-o {
-  display: flex;
-  padding: 20px;
-  justify-content: space-around;
-  align-items: flex-start;
-  width: 100%;
-}
-
-.box {
-  width: 30%;
-  padding: 20px;
-  font-family: 'nunito', sans-serif;
-  height: auto;
-  background-color: #d2a6e9b6;
-  border: 1px solid #ccc;
-  text-align: left;
-  border-color: #d2a6e9b6;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .column {
@@ -151,6 +112,61 @@ nav ul li a:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.menu-container {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 5px 30px;
+  color: #000 !important;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Botón de menú */
+.toggle-header {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute; /* Posicionar el botón en el lado derecho */
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none; /* Oculta el botón por defecto */
+}
+
+/* Menú de navegación */
+.menu-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 5px 30px;
+  color: #000 !important;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.menu-container ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.menu-container ul li {
+  margin-right: 20px;
+}
+
+.menu-container ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu-container ul li a:hover {
+  color: #00d9ff;
+}
 .suggestion-bubble {
   position: fixed;
   bottom: 20px; /* Posición en la parte inferior */
@@ -175,108 +191,104 @@ nav ul li a:hover {
   display: block;
   margin-top: 15px; /* Más espacio entre el texto y el enlace */
 }
-
-.close-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  cursor: pointer;
+.box {
+  width: 30%;
+  padding: 20px;
+  font-family: 'nunito', sans-serif;
+  height: auto;
+  background-color: #ffffffb6;
+  border: 1px solid #ffffff;
+  text-align: left;
+  border-color: #ffffffb6;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-  background-color: #000000;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  width: 100%; /* Establecer el ancho al 100% */
-  margin: 0; /* Eliminar márgenes */
-  bottom: 0; /* Colocar el footer en la parte inferior de la ventana del navegador */
-  left: 0; /* Asegurar que el footer comience desde el borde izquierdo */
-  right: 0; /* Asegurar que el footer termine en el borde derecho */
-}
-
-/* Media queries para adaptabilidad */
-@media (max-width: 1200px) {
-  .container-pr {
-    flex-direction: column;
+/* Estilos del menú en dispositivos grandes */
+@media (min-width: 992px) {
+  .toggle-header {
+    display: none; /* Oculta el botón en pantallas grandes */
   }
-
-  .container-one,
-  .container-two {
-    width: 100%;
-    margin-right: 0;
+  .menu-container {
+    display: flex; /* Muestra el menú por defecto en pantallas grandes */
+    flex-direction: row;
   }
-
-  .box {
-    width: 45%; /* Ajustar el ancho de las cajas en pantallas más pequeñas */
+  nav ul {
+    display: flex;
   }
 }
 
-@media (max-width: 768px) {
+/* Estilos para dispositivos móviles */
+@media (max-width: 992px) {
+  .menu-container {
+    display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+  }
+
+  .menu-container.show {
+    display: flex; /* Muestra el menú cuando la clase show está activa */
+  }
+
+  .toggle-header {
+    display: block; /* Muestra el botón en pantallas pequeñas */
+  }
+
+  /* Ajusta el padding del header en dispositivos móviles */
   header {
+    padding: 10px;
+  }
+
+  .header-container {
+    flex-direction: row; /* Cambia a fila para que el botón esté al lado derecho */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 768px) {
+  .toggle-header {
+    font-size: 20px;
+  }
+  .container-two{
+    width:80%;
+  }
+  .menu-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    padding: 0px 30px;
+    color: #000 !important;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
-  }
-
-  .login-button-container {
-    padding: 10px;
-  }
-
-  .container-pr {
-    flex-direction: column;
-    margin: 10px;
-  }
-
-  .container-one,
-  .container-two {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .box {
-    width: 100%; /* Ajustar el ancho de las cajas en pantallas pequeñas */
-    margin-bottom: 20px;
-  }
-
-  .suggestion-bubble {
-    width: 90%;
-    right: 5%;
-    bottom: 10px;
-    padding: 10px;
-  }
-
-  .suggestion-bubble p {
-    font-size: 14px;
-  }
-
-  footer {
-    padding: 15px;
-  }
 }
 
-@media (max-width: 480px) {
+/* Cambiar la dirección del flex a columna */
+.menu-container ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Cambiar de fila a columna */
+}
+
+/* Añadir margen entre los elementos del menú */
+.menu-container ul li {
+    margin-bottom: 10px; /* Añadir espacio entre elementos */
+}
+.box {
+  width: 90%;
+  padding: 20px;
+  font-family: 'nunito', sans-serif;
+  height: auto;
+  background-color: #ffffffb6;
+  border: 1px solid #ffffff;
+  text-align: left;
+  border-color: #ffffffb6;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
   h1 {
-    font-size: 1.2rem; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
+    font-size: 1.2rem;
   }
-
-  .box {
-    width: 100%;
-  }
-
-  .suggestion-bubble {
-    width: 100%;
-    bottom: 0;
-    right: 0;
-    padding: 5px;
-  }
-
-  .suggestion-bubble p {
-    font-size: 12px;
-  }
+  
 }
