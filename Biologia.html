@@ -7,25 +7,26 @@
     <link rel="stylesheet" href="stylesbio.css">
 </head>
 <body>
-    <header>
-        <div class="login-button-container">
-            <button class="login-button">L</button>
+   <header>
+        <div class="header-container">
+          <h1>Dolphin Assistant</h1>
+          <button class="toggle-header" aria-label="Abrir menú">☰</button>
         </div>
-        <h1>Dolphin Assistant</h1>
-        <div class="menu-container">
-            <nav class="menu">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Ingles.html">Inglés</a></li>
-                    <li><a href="matematicas.html">Matemáticas</a></li>
-                    <li><a href="Lenguaje.html">Lenguaje</a></li>
-                    <li><a href="Biologia.html">Biología</a></li>
-                    <li><a href="Sociales.html">Sociales</a></li>
-                    <li><a href="Tecnicos.html">Técnicos SENA</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <nav class="menu-container">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Ingles.html">Inglés</a></li>
+            <li><a href="matematicas.html">Matemáticas</a></li>
+            <li><a href="Lenguaje.html">Lenguaje</a></li>
+            <li><a href="Biologia.html">Biología</a></li>
+            <li><a href="Sociales.html">Sociales</a></li>
+            <li><a href="Tecnicos.html">Técnicos SENA</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+    
+    
     <div class="suggestion-bubble" id="suggestionBubble">
         <button class="close-button" onclick="closeBubble()">×</button>
         <p>Tienes alguna sugerencia para mejorar nuestra experiencia? No dudes en contactarnos para mostrarnos tus ideas! Tu opinión es importante para nosotros.</p>
@@ -33,11 +34,20 @@
     </div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const toggleHeader = document.querySelector('.toggle-header');
+        const menuContainer = document.querySelector('.menu-container');
+      
+        toggleHeader.addEventListener('click', function () {
+          menuContainer.classList.toggle('show');
+        });
+      });
+      
         function closeBubble() {
             document.getElementById('suggestionBubble').style.display = 'none';
         }
+        
     </script>
-    
         <div class="container-pr">
             <div class="container-one">
                 <section class="sidebar">
