@@ -19,7 +19,7 @@ body {
 .login-button-container {
     padding-right: 5px;
     align-items: center;
-    padding: 5px; 
+    padding: 5px;
 }
 
 .login-button {
@@ -46,7 +46,13 @@ header {
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 
 h1 {
@@ -55,12 +61,16 @@ h1 {
 }
 
 .menu-container {
+    display: flex; /* Show menu container by default on large screens */
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 40px;
     padding: 5px 30px;
+    color: #000 !important;
+    flex-direction: row; /* Ensure horizontal alignment */
+    align-items: center;
 }
 
-
+/* Menu styles for large screens */
 nav ul {
     list-style: none;
     padding: 0;
@@ -81,36 +91,42 @@ nav ul li a {
 nav ul li a:hover {
     color: #00d9ff;
 }
+
+/* Container styles */
 .container-prin {
     width: 100%;
-    height: 90vh; /* 100% de la altura del viewport */
+    height: 90vh;
     display: flex;
-    justify-content: space-between; /* Asegura que el contenido y la imagen estén en lados opuestos */
-    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: space-between;
+    align-items: center;
     padding-left: 40px;
     text-align: left;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Added margin to avoid being too close to the header */
 }
 
 .container-prin h1 {
-    font-size: 40px; /* Ajusta el tamaño del texto aquí */
+    font-size: 40px;
     font-family: "www", sans-serif;
-    margin: 0; /* Elimina márgenes predeterminados */
+    margin: 0;
 }
 
 .container-prin img {
-    max-width: 45%; /* Ajusta el tamaño máximo de la imagen al 40% del contenedor */
+    max-width: 45%;
     height: auto;
-    margin-left: 10px; /* Añade espacio entre el texto y la imagen */
+    margin-left: 10px;
     margin-right: 60px;
 }
+
+/* Suggestion bubble styles */
 .suggestion-bubble {
     position: fixed;
-    bottom: 20px; /* Posición en la parte inferior */
-    right: 20px; /* Posición en la parte derecha */
-    width: 300px; /* Ancho más grande */
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 20px; /* Padding más grande */
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -118,27 +134,17 @@ nav ul li a:hover {
 
 .suggestion-bubble p {
     margin: 0;
-    font-size: 16px; /* Tamaño de fuente más grande */
+    font-size: 16px;
 }
 
 .suggestion-bubble a {
     color: #00d9ff;
     text-decoration: none;
     display: block;
-    margin-top: 15px; /* Más espacio entre el texto y el enlace */
+    margin-top: 15px;
 }
 
-.close-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    cursor: pointer;
-}
+/* Construction popup styles */
 .construction-popup {
     position: fixed;
     top: 10%;
@@ -149,7 +155,7 @@ nav ul li a:hover {
     color: #333;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra negra */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     z-index: 1001;
     display: flex;
     flex-direction: column;
@@ -163,7 +169,7 @@ nav ul li a:hover {
 }
 
 .construction-icons {
-    max-width: 300px; /* Ajusta el tamaño de los iconos */
+    max-width: 300px;
     margin-bottom: 20px;
 }
 
@@ -184,6 +190,20 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+.toggle-header {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
 footer {
     background-color: #000000;
     color: #fff;
@@ -194,4 +214,65 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .menu-container {
+        display: none; /* Hide menu container by default on small screens */
+    }
+
+    .toggle-header {
+        display: block; /* Show the menu toggle button */
+    }
+
+    .container-prin {
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .container-prin h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .container-prin img {
+        max-width: 90%;
+        margin: 20px 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .container-prin h1 {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .container-prin img {
+        max-width: 100%;
+    }
+
+    .suggestion-bubble {
+        width: 250px; /* Reduce width on very small screens */
+    }
+
+    .construction-popup {
+        width: 90%; /* Reduce width on very small screens */
+    }
+
+    .construction-popup h1 {
+        font-size: 24px;
+    }
 }
