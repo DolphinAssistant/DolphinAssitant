@@ -59,28 +59,30 @@ nav ul li a:hover {
 }
 
 /* Contenedores principales */
-
 .container-pr {
   display: flex;
   margin: 20px;
+  flex-wrap: wrap; /* Asegura que los elementos se envuelvan si no hay suficiente espacio */
 }
 
 .container-one {
-  width: 20%; /* Ancho del 40% para el primer contenedor */
+  flex: 0 0 40%; /* Ancho del 40% */
   margin-right: 20px; /* Espacio entre los dos contenedores */
   background-color: #2b6eff80; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
 }
 
 .container-two {
-  width: 80%; /* Ancho del 55% para el segundo contenedor */
+  flex: 0 0 60%; /* Ancho del 60% */
   background-color: #2b6eff20; /* Fondo del contenedor */
   padding: 20px;
   color: #000000; /* Color del texto */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
 }
 
-
+/* Otros estilos */
 .section {
   text-align: center;
   background-color: #02318fa6;
@@ -107,12 +109,13 @@ nav ul li a:hover {
   font-size: 24px;
   cursor: pointer;
   padding: 10px;
-  position: absolute; /* Posicionar el botón en el lado derecho */
+  position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  display: none; /* Oculta el botón por defecto */
+  display: none;
 }
+
 /* Menú de navegación */
 .menu-container {
   display: flex;
@@ -123,6 +126,7 @@ nav ul li a:hover {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .menu-container ul {
   list-style: none;
   padding: 0;
@@ -143,6 +147,7 @@ nav ul li a:hover {
 .menu-container ul li a:hover {
   color: #00d9ff;
 }
+
 .suggestion-bubble {
   position: fixed;
   bottom: 20px; /* Posición en la parte inferior */
@@ -217,9 +222,24 @@ nav ul li a:hover {
   .toggle-header {
     font-size: 20px;
   }
-  .container-two{
-    width:80%;
+
+  .container-pr {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para apilar los contenedores */
   }
+
+  .container-one, .container-two {
+    width: 100%; /* Ambos contenedores ocupan el ancho completo */
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-bottom: 20px; /* Espacio entre los contenedores cuando están apilados */
+    background-color: #ffffffa2;
+    border-radius: 10px;
+  }
+
+  .container-two {
+    background-color: #fffeff9f;
+  }
+
   .menu-container {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 40px;
@@ -227,101 +247,13 @@ nav ul li a:hover {
     color: #000 !important;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.container-pr {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px;
-}
-
-.container-one {
-  flex: 1 1 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
-  background-color: #ffffffa2;
-  padding: 20px;
-  color: #000000;
-  border-radius: 10px;
-}
-
-.container-two {
-  flex: 1 1 100%;
-  max-width: 100%;
-  background-color: #fffeff9f;
-  padding: 20px;
-  color: #000000;
-  border-radius: 10px;
-}
-
-.column1 {
-  background-color: transparent;
-  padding: 20px;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-.container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.column {
-  flex: 1;
-  margin: 0 10px;
-  text-align: left;
-}
-
-.section {
-  text-align: center;
-  background-color: #02318fa6;
-  align-items: center;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-container {
-  display: none;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 40px;
-  padding: 5px 30px;
-  color: #000 !important;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-/* Botón de menú */
-.toggle-header {
-  background: none;
-  border: none;
-  color: #000;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 10px;
-  position: absolute; /* Posicionar el botón en el lado derecho */
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: none; /* Oculta el botón por defecto */
-}
-/* Cambiar la dirección del flex a columna */
-.menu-container ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Cambiar de fila a columna */
-}
-
-/* Añadir margen entre los elementos del menú */
-.menu-container ul li {
-    margin-bottom: 10px; /* Añadir espacio entre elementos */
-}
-
-  h1 {
-    font-size: 1.2rem;
   }
-  
+
+  .menu-container ul {
+    flex-direction: column;
+  }
+
+  .menu-container ul li {
+    margin-bottom: 10px; /* Añadir espacio entre elementos */
+  }
 }
