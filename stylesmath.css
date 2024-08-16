@@ -59,33 +59,34 @@ nav ul li a:hover {
 }
 
 /* Contenedores principales */
+
 .container-pr {
   display: flex;
   margin: 20px;
-  flex-wrap: wrap; /* Asegura que los elementos se envuelvan si no hay suficiente espacio */
 }
 
 .container-one {
-  flex: 0 0 40%; /* Ancho del 40% */
+  width: 20%; /* Ancho del 40% para el primer contenedor */
   margin-right: 20px; /* Espacio entre los dos contenedores */
-  background-color: #2b6eff80; /* Fondo del contenedor */
+  background-color: #ffffff96; /* Fondo del contenedor */
   padding: 20px;
+  border-radius: 20px;
   color: #000000; /* Color del texto */
-  box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
 }
 
 .container-two {
-  flex: 0 0 60%; /* Ancho del 60% */
-  background-color: #2b6eff20; /* Fondo del contenedor */
+  width: 80%; /* Ancho del 55% para el segundo contenedor */
+  background-color: #ffffff9f; /* Fondo del contenedor */
   padding: 20px;
+  border-radius: 20px;
   color: #000000; /* Color del texto */
-  box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
 }
+
 
 /* Otros estilos */
 .section {
   text-align: center;
-  background-color: #02318fa6;
+  background-color: #ffffffa6;
   align-items: center;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -229,7 +230,7 @@ nav ul li a:hover {
   }
 
   .container-one, .container-two {
-    width: 100%; /* Ambos contenedores ocupan el ancho completo */
+    width: 90%; /* Ambos contenedores ocupan el ancho completo */
     margin-right: 0; /* Elimina el margen derecho */
     margin-bottom: 20px; /* Espacio entre los contenedores cuando están apilados */
     background-color: #ffffffa2;
