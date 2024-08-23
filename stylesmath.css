@@ -193,7 +193,7 @@ nav ul li a:hover {
 }
 
 /* Estilos del menú en dispositivos grandes */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .toggle-header {
     display: none; /* Oculta el botón en pantallas grandes */
   }
@@ -237,7 +237,7 @@ nav ul li a:hover {
 }
 
 /* Estilos para pantallas muy pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .toggle-header {
     font-size: 20px;
   }
