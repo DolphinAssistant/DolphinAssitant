@@ -16,26 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-.login-button-container {
-    padding-right: 5px;
-    align-items: center;
-    padding: 5px;
-}
-
-.login-button {
-    background-color: #007bff;
-    color: white;
-    font-size: 14px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.login-button:hover {
-    background-color: #0056b3;
-}
 
 header {
     background-color: transparent;
@@ -60,30 +40,114 @@ h1 {
     font-size: 1.5rem;
 }
 
+
 .menu-container {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 40px;
     padding: 0px 30px;
     color: #000 !important;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row; /* Por defecto, el menú es horizontal */
+    align-items: center;
+}
+  
+  /* Botón de menú */
+  .toggle-header {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+  }
+  
+.menu-container {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 5px 30px;
+  color: #000 !important;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-/* Cambiar la dirección del flex a columna */
+/* Botón de menú */
+.toggle-header {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+/* Menú de navegación */
+.menu-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 5px 30px;
+  color: #000 !important;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .menu-container ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Cambiar de fila a columna */
+  list-style: none;
+  padding: 0;
+  display: flex;
 }
 
-/* Añadir margen entre los elementos del menú */
 .menu-container ul li {
-    margin-bottom: 10px; /* Añadir espacio entre elementos */
+  margin-right: 20px;
 }
 
-/* Menu styles for large screens */
+.menu-container ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu-container ul li a:hover {
+  color: #00d9ff;
+}
+
+.suggestion-bubble {
+  position: fixed;
+  bottom: 20px; /* Posición en la parte inferior */
+  right: 20px; /* Posición en la parte derecha */
+  width: 300px; /* Ancho más grande */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px; /* Padding más grande */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.suggestion-bubble p {
+  margin: 0;
+  font-size: 16px; /* Tamaño de fuente más grande */
+}
+
+.suggestion-bubble a {
+  color: #00d9ff;
+  text-decoration: none;
+  display: block;
+  margin-top: 15px; /* Más espacio entre el texto y el enlace */
+}
+  
 nav ul {
     list-style: none;
     padding: 0;
@@ -105,6 +169,7 @@ nav ul li a:hover {
     color: #00d9ff;
 }
 
+
 /* Container styles */
 .container-prin {
     width: 100%;
@@ -114,8 +179,6 @@ nav ul li a:hover {
     align-items: center;
     padding-left: 40px;
     text-align: left;
-    flex-wrap: wrap;
-    margin-top: 20px; /* Added margin to avoid being too close to the header */
 }
 
 .container-prin h1 {
@@ -128,33 +191,6 @@ nav ul li a:hover {
     max-width: 45%;
     height: auto;
     margin-left: 10px;
-    margin-right: 60px;
-}
-
-/* Suggestion bubble styles */
-.suggestion-bubble {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.suggestion-bubble p {
-    margin: 0;
-    font-size: 16px;
-}
-
-.suggestion-bubble a {
-    color: #00d9ff;
-    text-decoration: none;
-    display: block;
-    margin-top: 15px;
 }
 
 /* Construction popup styles */
@@ -233,6 +269,59 @@ footer {
     display: block !important; /* Asegura que el menú se muestre al agregar la clase "show" */
 }
 
+/* Styles for large screens */
+@media (min-width: 992px) {
+    .toggle-header {
+        display: none; /* Hide the button on large screens */
+    }
+    .menu-container {
+        display: flex; /* Show menu by default on large screens */
+        flex-direction: row;
+    }
+    nav ul {
+        display: flex;
+    }
+}
+/* Estilos para pantallas pequeñas */
+@media (max-width: 992px) {
+    .menu-container {
+      display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+    }
+  
+    .menu-container.show {
+      display: flex; /* Muestra el menú cuando la clase show está activa */
+      flex-direction: column; /* Cambia la dirección a columna para pantallas pequeñas */
+      width: 100%; /* Asegura que el menú ocupe todo el ancho */
+    }
+  
+    .toggle-header {
+      display: block; /* Muestra el botón en pantallas pequeñas */
+    }
+  
+    header {
+      padding: 10px;
+      flex-direction: column; /* Cambia la dirección del header a columna */
+      align-items: flex-start; /* Alinea los elementos al principio */
+      justify-content: flex-start; /* Alinea los elementos al principio */
+    }
+  
+    .header-container {
+      width: 100%; /* Asegura que el contenedor del header ocupe todo el ancho */
+      flex-direction: column; /* Cambia la dirección a columna */
+      align-items: flex-start; /* Alinea los elementos al principio */
+    }
+  
+    .menu-container ul {
+      flex-direction: column; /* Cambia la dirección del menú a columna */
+    }
+  
+    .menu-container ul li {
+      margin-bottom: 10px; /* Añadir espacio entre los elementos del menú */
+    }
+  }
+  
+
+/* Styles for very small screens */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -246,17 +335,17 @@ footer {
     }
 
     .menu-container {
-        display: none; /* Oculta el menú por defecto en pantallas pequeñas */
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        display: none; /* Hide menu by default on very small screens */
+        flex-direction: column; /* Column layout on very small screens */
         width: 100%;
     }
 
     .menu-container.show {
-        display: flex; /* Muestra el menú al hacer clic en el botón */
+        display: flex; /* Show menu on click */
     }
 
     .toggle-header {
-        display: block; /* Muestra el botón del menú */
+        display: block; /* Show toggle button */
     }
 
     .container-prin {
@@ -275,25 +364,30 @@ footer {
         margin-right: 0;
     }
 }
+
 @media (max-width: 420px) {
-    .container-prin h1 {
-        font-size: 20px;
+    .container-prin {
         padding: 20px;
+    }
+
+    .container-prin h1 {
+        font-size: 30px;
     }
 
     .container-prin img {
         max-width: 100%;
-        height: auto;display: flex;
+        height: auto;
+        display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 20px; /* Reduce el margen izquierdo */
-        margin-right: 20px; /* Reduce el margen derecho */
+        margin-left: 20px; /* Reduce left margin */
+        margin-right: 20px; /* Reduce right margin */
     }
 
     .suggestion-bubble {
         width: 250px; /* Reduce width on very small screens */
     }
-    
+
     .construction-popup {
         width: 90%; /* Reduce width on very small screens */
     }
@@ -302,4 +396,22 @@ footer {
         font-size: 24px;
     }
 
+    .menu-container ul {
+        flex-direction: column;
+    }
+
+    .menu-container ul li {
+        margin-bottom: 10px; /* Add space between items */
+    }
+    footer {
+        background-color: #000000;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+        margin: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
