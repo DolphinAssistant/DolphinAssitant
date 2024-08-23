@@ -1,0 +1,260 @@
+@font-face {
+  font-family: nunito;
+  src: url(PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: "nunito";
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  background: linear-gradient(90deg, #c3dee7, #42b6ff);
+  color: #000000;
+}
+
+/* Estilos para el header */
+header {
+  background-color: rgba(255, 255, 255, 0.44);
+  color: #000000;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.342);
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Estilo para el contenedor del header */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00d9ff;
+}
+
+/* Contenedores principales */
+
+.container-pr {
+  display: flex;
+  margin: 20px;
+}
+
+.container-one {
+  width: 20%; /* Ancho del 40% para el primer contenedor */
+  margin-right: 20px; /* Espacio entre los dos contenedores */
+  background-color: #ffffff96; /* Fondo del contenedor */
+  padding: 20px;
+  border-radius: 20px;
+  color: #000000; /* Color del texto */
+}
+
+.container-two {
+  width: 80%; /* Ancho del 55% para el segundo contenedor */
+  background-color: #ffffff9f; /* Fondo del contenedor */
+  padding: 20px;
+  border-radius: 20px;
+  color: #000000; /* Color del texto */
+}
+
+
+/* Otros estilos */
+.section {
+  text-align: center;
+  background-color: #ffffffa6;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 5px 30px;
+  color: #000 !important;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Botón de menú */
+.toggle-header {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+/* Menú de navegación */
+.menu-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 5px 30px;
+  color: #000 !important;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu-container ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.menu-container ul li {
+  margin-right: 20px;
+}
+
+.menu-container ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu-container ul li a:hover {
+  color: #00d9ff;
+}
+
+.suggestion-bubble {
+  position: fixed;
+  bottom: 20px; /* Posición en la parte inferior */
+  right: 20px; /* Posición en la parte derecha */
+  width: 300px; /* Ancho más grande */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px; /* Padding más grande */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.suggestion-bubble p {
+  margin: 0;
+  font-size: 16px; /* Tamaño de fuente más grande */
+}
+
+.suggestion-bubble a {
+  color: #00d9ff;
+  text-decoration: none;
+  display: block;
+  margin-top: 15px; /* Más espacio entre el texto y el enlace */
+}
+
+/* Estilos del menú en dispositivos grandes */
+@media (min-width: 992px) {
+  .toggle-header {
+    display: none; /* Oculta el botón en pantallas grandes */
+  }
+  .menu-container {
+    display: flex; /* Muestra el menú por defecto en pantallas grandes */
+    flex-direction: row;
+  }
+  nav ul {
+    display: flex;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 992px) {
+  .menu-container {
+    display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+  }
+
+  .menu-container.show {
+    display: flex; /* Muestra el menú cuando la clase show está activa */
+  }
+
+  .toggle-header {
+    display: block; /* Muestra el botón en pantallas pequeñas */
+  }
+
+  /* Ajusta el padding del header en dispositivos móviles */
+  header {
+    padding: 10px;
+  }
+
+  .header-container {
+    flex-direction: row; /* Cambia a fila para que el botón esté al lado derecho */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 768px) {
+  .toggle-header {
+    font-size: 20px;
+  }
+
+  .container-pr {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para apilar los contenedores */
+  }
+
+  .container-one, .container-two {
+    width: 90%; /* Ambos contenedores ocupan el ancho completo */
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-bottom: 20px; /* Espacio entre los contenedores cuando están apilados */
+    background-color: #ffffffa2;
+    border-radius: 10px;
+  }
+
+  .container-two {
+    background-color: #fffeff9f;
+  }
+
+  .menu-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    padding: 0px 30px;
+    color: #000 !important;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-container ul {
+    flex-direction: column;
+  }
+
+  .menu-container ul li {
+    margin-bottom: 10px; /* Añadir espacio entre elementos */
+  }
+}
