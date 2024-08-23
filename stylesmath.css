@@ -1,71 +1,117 @@
 @font-face {
-    font-family: 'Nunito';
-    src: url('PlusJakartaSans-VariableFont_wght.ttf');
-}
-@font-face {
-    font-family: 'www';
-    src: url('Righteous-Regular.ttf');
+  font-family: nunito;
+  src: url(PlusJakartaSans-VariableFont_wght.ttf);
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(90deg, #c3dee7, #42b6ff);
-    color: #000;
-    overflow-x: hidden;
+  font-family: "nunito";
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  background: linear-gradient(90deg, #c3dee7, #42b6ff);
+  color: #000000;
 }
 
-
+/* Estilos para el header */
 header {
-    background-color: transparent;
-    color: #000000;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.44);
+  color: #000000;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.342);
+  justify-content: space-between;
+  position: relative; /* Añadido para el botón de menú */
 }
 
+/* Estilo para el contenedor del header */
 .header-container {
-    display: flex;
-    align-items: center;
-    width: auto;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 h1 {
-    margin: 0;
-    font-size: 1.5rem;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-
-.menu-container {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 40px;
-    padding: 0px 30px;
-    color: #000 !important;
-    display: flex;
-    flex-direction: row; /* Por defecto, el menú es horizontal */
-    align-items: center;
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
 }
-  
-  /* Botón de menú */
-  .toggle-header {
-    background: none;
-    border: none;
-    color: #000;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none;
-  }
-  
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00d9ff;
+}
+
+.container-pr {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.container-one {
+  flex: 1 1 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: #ffffffa2;
+  padding: 20px;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.container-two {
+  flex: 1 1 100%;
+  max-width: 100%;
+  background-color: #fffeff9f;
+  padding: 20px;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.column1 {
+  background-color: transparent;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.column {
+  flex: 1;
+  margin: 0 10px;
+  text-align: left;
+}
+
+.section {
+  text-align: center;
+  background-color: #02318fa6;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
 .menu-container {
   display: none;
   background-color: rgba(255, 255, 255, 0.8);
@@ -84,11 +130,11 @@ h1 {
   font-size: 24px;
   cursor: pointer;
   padding: 10px;
-  position: absolute;
+  position: absolute; /* Posicionar el botón en el lado derecho */
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  display: none;
+  display: none; /* Oculta el botón por defecto */
 }
 
 /* Menú de navegación */
@@ -101,7 +147,6 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
 }
-
 .menu-container ul {
   list-style: none;
   padding: 0;
@@ -122,7 +167,6 @@ h1 {
 .menu-container ul li a:hover {
   color: #00d9ff;
 }
-
 .suggestion-bubble {
   position: fixed;
   bottom: 20px; /* Posición en la parte inferior */
@@ -147,271 +191,83 @@ h1 {
   display: block;
   margin-top: 15px; /* Más espacio entre el texto y el enlace */
 }
-  
-nav ul {
+
+/* Estilos del menú en dispositivos grandes */
+@media (min-width: 992px) {
+  .toggle-header {
+    display: none; /* Oculta el botón en pantallas grandes */
+  }
+  .menu-container {
+    display: flex; /* Muestra el menú por defecto en pantallas grandes */
+    flex-direction: row;
+  }
+  nav ul {
+    display: flex;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 992px) {
+  .menu-container {
+    display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+  }
+
+  .menu-container.show {
+    display: flex; /* Muestra el menú cuando la clase show está activa */
+  }
+
+  .toggle-header {
+    display: block; /* Muestra el botón en pantallas pequeñas */
+  }
+
+  /* Ajusta el padding del header en dispositivos móviles */
+  header {
+    padding: 10px;
+  }
+
+  .header-container {
+    flex-direction: row; /* Cambia a fila para que el botón esté al lado derecho */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 768px) {
+  .toggle-header {
+    font-size: 20px;
+  }
+  .container-two{
+    width:80%;
+  }
+  .menu-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    padding: 0px 30px;
+    color: #000 !important;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Cambiar la dirección del flex a columna */
+.menu-container ul {
     list-style: none;
     padding: 0;
     display: flex;
+    flex-direction: column; /* Cambiar de fila a columna */
 }
 
-nav ul li {
-    margin-right: 20px;
+/* Añadir margen entre los elementos del menú */
+.menu-container ul li {
+    margin-bottom: 10px; /* Añadir espacio entre elementos */
 }
 
-nav ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #00d9ff;
-}
-
-
-/* Container styles */
-.container-prin {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 40px;
-    text-align: left;
-}
-
-.container-prin h1 {
-    font-size: 40px;
-    font-family: "www", sans-serif;
-    margin: 0;
-}
-
-.container-prin img {
-    max-width: 45%;
-    height: auto;
-    margin-left: 10px;
-}
-
-/* Construction popup styles */
-.construction-popup {
-    position: fixed;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #333;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    z-index: 1001;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.construction-content {
-    align-items: center;
-}
-
-.construction-icons {
-    max-width: 300px;
-    margin-bottom: 20px;
-}
-
-.construction-popup h1 {
-    margin: 0;
-    font-size: 30px;
-}
-
-.close-button-construction {
-    background: none;
-    border: none;
-    color: #000;
-    font-size: 24px;
-    font-weight: bold;
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    cursor: pointer;
-}
-
-.toggle-header {
-    background: none;
-    border: none;
-    color: #000;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none;
-}
-
-footer {
-    background-color: #000000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    margin: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.menu-container.show {
-    display: block !important; /* Asegura que el menú se muestre al agregar la clase "show" */
-}
-
-/* Styles for large screens */
-@media (min-width: 992px) {
-    .toggle-header {
-        display: none; /* Hide the button on large screens */
-    }
-    .menu-container {
-        display: flex; /* Show menu by default on large screens */
-        flex-direction: row;
-    }
-    nav ul {
-        display: flex;
-    }
-}
-/* Estilos para pantallas pequeñas */
-@media (max-width: 992px) {
-    .menu-container {
-      display: none; /* Oculta el menú por defecto en pantallas pequeñas */
-    }
-  
-    .menu-container.show {
-      display: flex; /* Muestra el menú cuando la clase show está activa */
-      flex-direction: column; /* Cambia la dirección a columna para pantallas pequeñas */
-      width: 100%; /* Asegura que el menú ocupe todo el ancho */
-    }
-  
-    .toggle-header {
-      display: block; /* Muestra el botón en pantallas pequeñas */
-    }
-  
-    header {
-      padding: 10px;
-      flex-direction: column; /* Cambia la dirección del header a columna */
-      align-items: flex-start; /* Alinea los elementos al principio */
-      justify-content: flex-start; /* Alinea los elementos al principio */
-    }
-  
-    .header-container {
-      width: 100%; /* Asegura que el contenedor del header ocupe todo el ancho */
-      flex-direction: column; /* Cambia la dirección a columna */
-      align-items: flex-start; /* Alinea los elementos al principio */
-    }
-  
-    .menu-container ul {
-      flex-direction: column; /* Cambia la dirección del menú a columna */
-    }
-  
-    .menu-container ul li {
-      margin-bottom: 10px; /* Añadir espacio entre los elementos del menú */
-    }
+  h1 {
+    font-size: 1.2rem;
   }
   
-
-/* Styles for very small screens */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .header-container {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .menu-container {
-        display: none; /* Hide menu by default on very small screens */
-        flex-direction: column; /* Column layout on very small screens */
-        width: 100%;
-    }
-
-    .menu-container.show {
-        display: flex; /* Show menu on click */
-    }
-
-    .toggle-header {
-        display: block; /* Show toggle button */
-    }
-
-    .container-prin {
-        flex-direction: column;
-        padding-left: 20px;
-    }
-
-    .container-prin h1 {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .container-prin img {
-        max-width: 90%;
-        margin: 20px 0;
-        margin-right: 0;
-    }
-}
-
-@media (max-width: 420px) {
-    .container-prin {
-        padding: 20px;
-    }
-
-    .container-prin h1 {
-        font-size: 30px;
-    }
-
-    .container-prin img {
-        max-width: 100%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 20px; /* Reduce left margin */
-        margin-right: 20px; /* Reduce right margin */
-    }
-
-    .suggestion-bubble {
-        width: 250px; /* Reduce width on very small screens */
-    }
-
-    .construction-popup {
-        width: 90%; /* Reduce width on very small screens */
-    }
-
-    .construction-popup h1 {
-        font-size: 24px;
-    }
-
-    .menu-container ul {
-        flex-direction: column;
-    }
-
-    .menu-container ul li {
-        margin-bottom: 10px; /* Add space between items */
-    }
-    footer {
-        background-color: #000000;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        width: 100%;
-        margin: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
 }
