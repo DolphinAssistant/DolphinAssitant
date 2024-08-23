@@ -179,6 +179,14 @@ nav ul li a:hover {
   .toggle-header {
     display: none; /* Oculta el botón en pantallas grandes */
   }
+  body {
+  font-family: "nunito";
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  background: linear-gradient(90deg, #c3dee7, #42b6ff);
+  color: #000000;
+}
   .menu-container {
     display: flex; /* Muestra el menú por defecto en pantallas grandes */
     flex-direction: row;
@@ -249,7 +257,14 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: flex-start;
   }
-
+body {
+  font-family: "nunito";
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  background: linear-gradient(90deg, #c3dee7, #42b6ff);
+  color: #000000;
+}
   .menu-container ul {
     flex-direction: column;
   }
