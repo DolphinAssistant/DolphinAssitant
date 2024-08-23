@@ -196,7 +196,6 @@ button.arriba {
     background-color: blue;
     color: white;
     border: none;
-    font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,9 +204,14 @@ button.arriba {
     text-align: center;
 }
 
+button.arriba i {
+    font-size: 24px;
+}
+
 button.arriba:hover {
     background-color: darkblue;
 }
+
 
 /* Estilos del menú en dispositivos grandes */
 @media (min-width: 992px) {
