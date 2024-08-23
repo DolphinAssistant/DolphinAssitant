@@ -23,6 +23,27 @@ header {
   justify-content: space-between;
   position: relative;
 }
+button.arriba {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(154, 214, 255);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    text-align: center;
+}
+
+button.arriba:hover {
+    background-color: rgb(0, 183, 255);
+}
 
 /* Estilo para el contenedor del header */
 .header-container {
