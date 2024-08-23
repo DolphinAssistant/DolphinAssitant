@@ -180,7 +180,29 @@ nav ul li a:hover {
 .container{
   width:100%;
   height:auto;
+}button.arriba {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(154, 214, 255);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    text-align: center;
 }
+
+button.arriba:hover {
+    background-color: rgb(0, 183, 255);
+}
+
+
 /* Estilos del menú en dispositivos grandes */
 @media (min-width: 992px) {
   .toggle-header {
@@ -219,7 +241,12 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
   }
-
+  .column1{
+    width: auto;
+}
+.column{
+    width: auto;
+}
   h1 {
     font-size: 1.3rem;
   }
@@ -264,4 +291,7 @@ nav ul li a:hover {
   .menu-container ul li {
     margin-bottom: 10px; /* Añadir espacio entre elementos */
   }
+  .container{
+  width:100%;
+}
 }
