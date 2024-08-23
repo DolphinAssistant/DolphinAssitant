@@ -173,7 +173,10 @@ nav ul li a:hover {
   display: block;
   margin-top: 15px; /* Más espacio entre el texto y el enlace */
 }
-
+.column1{
+  width:500;
+  height:109;
+}
 /* Estilos del menú en dispositivos grandes */
 @media (min-width: 992px) {
   .toggle-header {
@@ -212,7 +215,12 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
   }
-
+  .column1{
+    width: auto;
+}
+.column{
+    width: auto;
+}
   h1 {
     font-size: 1.3rem;
   }
