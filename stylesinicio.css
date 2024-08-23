@@ -277,7 +277,7 @@ footer {
 }
 @media (max-width: 420px) {
     .container-prin h1 {
-        font-size: 24px;
+        font-size: 20px;
         padding: 20px;
     }
 
@@ -286,7 +286,7 @@ footer {
         height: auto;display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 10px; /* Reduce el margen izquierdo */
+        margin-left: 20px; /* Reduce el margen izquierdo */
         margin-right: 20px; /* Reduce el margen derecho */
     }
 
