@@ -174,12 +174,12 @@ nav ul li a:hover {
   margin-top: 15px; /* Más espacio entre el texto y el enlace */
 }
 .column1{
-  width:500;
-  height:109;
+  width:600px;
+  height:360px;
 }
 .column{
-  width:500;
-  height:200;
+  width:500px;
+  height:360px;
   display: inline-block;
 }
 /* Estilos del menú en dispositivos grandes */
