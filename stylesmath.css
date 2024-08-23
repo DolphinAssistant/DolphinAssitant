@@ -177,6 +177,11 @@ nav ul li a:hover {
   width:500;
   height:109;
 }
+.column{
+  width:500;
+  height:200;
+  display: inline-block;
+}
 /* Estilos del menú en dispositivos grandes */
 @media (min-width: 992px) {
   .toggle-header {
