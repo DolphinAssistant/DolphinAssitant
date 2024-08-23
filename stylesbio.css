@@ -173,7 +173,14 @@ nav ul li a:hover {
   display: block;
   margin-top: 15px; /* Más espacio entre el texto y el enlace */
 }
-
+.column1{
+  width:100%;
+  height:360px;
+}
+.container{
+  width:100%;
+  height:auto;
+}
 /* Estilos del menú en dispositivos grandes */
 @media (min-width: 992px) {
   .toggle-header {
