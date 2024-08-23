@@ -80,9 +80,14 @@ nav ul li a:hover {
   padding: 20px;
   border-radius: 20px;
   color: #000000; /* Color del texto */
+  height: auto;
 }
 
-
+.section{
+  width: 100%;
+  height: 20px;
+  padding: 20px;
+}
 /* Otros estilos */
 .section {
   text-align: center;
@@ -177,16 +182,24 @@ nav ul li a:hover {
   width:100%;
   height:360px;
 }
-.container{
-  width:100%;
-  height:auto;
-  display: inline-block;
+.container {
+  display: flex; /* Utiliza flexbox para alinear las columnas horizontalmente */
+  gap: 20px; /* Espacio entre columnas */
+  flex-wrap: wrap; /* Permite que las columnas se ajusten en una nueva fila si el espacio es insuficiente */
 }
-.column{
-  width:50%;
-  height:360px;
-  display: inline-block;
+
+.column {
+  flex: 1; /* Hace que cada columna ocupe el mismo espacio */
+  min-width: 300px; /* Define un ancho mínimo para las columnas */
+  box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
 }
+
+/* Ajusta el tamaño de los videos para que se adapten a su contenedor */
+video {
+  width: 100%;
+  height: auto;
+}
+
 button.arriba {
     position: fixed;
     bottom: 20px;
@@ -299,6 +312,6 @@ button.arriba:hover {
     margin-bottom: 10px; /* Añadir espacio entre elementos */
   }
   .container{
-  width:100%;
+  width:300px;
 }
 }
