@@ -14,12 +14,12 @@
             <nav class="menu">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Ingles.html">Ingles</a></li>
-                    <li><a href="matematicas.html">Matematicas</a></li>
+                    <li><a href="Ingles.html">Inglés</a></li>
+                    <li><a href="matematicas.html">Matemáticas</a></li>
                     <li><a href="Lenguaje.html">Lenguaje</a></li>
-                    <li><a href="Biologia.html">Biologia</a></li>
+                    <li><a href="Biologia.html">Biología</a></li>
                     <li><a href="Sociales.html">Sociales</a></li>
-                    <li><a href="Tecnicos.html">Tecnicos SENA</a></li>
+                    <li><a href="Tecnicos.html">Técnicos SENA</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,10 +43,12 @@
         <button class="close-button-construction" onclick="closeConstructionPopup()">×</button>
         <div class="construction-content">
             <img src="1722477940114.png" alt="Construcción" class="construction-icons">
-            <h1>Esta página aún está en construcción. Estamos haciendo nuestro mejor trabajo para llenar los vacíos con el mejor contenido audiovisual posible.</h1>
-            <h1>¡Agradecemos tu comprensión!</h1>
+            <h1>¡Estamos en construcción!</h1>
+            <p>Pronto podrás disfrutar de nuevos contenidos y mejoras. ¡Gracias por tu paciencia!</p>
         </div>
     </div>
+
+    
 
     <script>
         function closeBubble() {
@@ -56,14 +58,21 @@
         function closeConstructionPopup() {
             document.getElementById('constructionPopup').style.display = 'none';
         }
-        document.addEventListener('DOMContentLoaded', function () {
-        const toggleHeader = document.querySelector('.toggle-header');
-        const menuContainer = document.querySelector('.menu-container');
-      
-        toggleHeader.addEventListener('click', function () {
-          menuContainer.classList.toggle('show');
-        });
-      });
+        function toggleMenu() {
+    var menu = document.querySelector('.menu-container');
+    menu.classList.toggle('show');
+}
+
+function closeBubble() {
+    var bubble = document.getElementById('suggestionBubble');
+    bubble.style.display = 'none';
+}
+
+function closeConstructionPopup() {
+    var popup = document.getElementById('constructionPopup');
+    popup.style.display = 'none';
+}
+
     </script>
 
     <footer>
