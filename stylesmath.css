@@ -177,11 +177,37 @@ nav ul li a:hover {
   width:600px;
   height:360px;
 }
+.container{
+  width:100%;
+}
 .column{
   width:500px;
   height:360px;
   display: inline-block;
 }
+button.arriba {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    text-align: center;
+}
+
+button.arriba:hover {
+    background-color: darkblue;
+}
+
 /* Estilos del menú en dispositivos grandes */
 @media (min-width: 992px) {
   .toggle-header {
@@ -270,4 +296,7 @@ nav ul li a:hover {
   .menu-container ul li {
     margin-bottom: 10px; /* Añadir espacio entre elementos */
   }
+  .container{
+  width:100%;
+}
 }
