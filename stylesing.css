@@ -206,7 +206,9 @@ nav ul li a:hover {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-
+.container-o{
+  display: flex
+}
 
 /* Estilos del menú en dispositivos grandes */
 @media (min-width: 992px) {
