@@ -11,7 +11,7 @@ body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(90deg, #c3dee7, #42b6ff);
+    background: linear-gradient(135deg, #0D324D 0%, #7F5A83 100%);
     color: #000;
     overflow-x: hidden;
 }
