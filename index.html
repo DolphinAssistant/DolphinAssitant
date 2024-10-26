@@ -39,14 +39,6 @@
         <a href="mailto:dolphinassistant21@gmail.com">dolphinassistant21@gmail.com</a>
     </div>
 
-    <div class="construction-popup" id="constructionPopup">
-        <button class="close-button-construction" onclick="closeConstructionPopup()">×</button>
-        <div class="construction-content">
-            <img src="1722477940114.png" alt="Construcción" class="construction-icons">
-            <h1>¡Estamos en construcción!</h1>
-            <p>Pronto podrás disfrutar de nuevos contenidos y mejoras. ¡Gracias por tu paciencia!</p>
-        </div>
-    </div>
 
     
 
@@ -55,9 +47,6 @@
             document.getElementById('suggestionBubble').style.display = 'none';
         }
 
-        function closeConstructionPopup() {
-            document.getElementById('constructionPopup').style.display = 'none';
-        }
         function toggleMenu() {
     var menu = document.querySelector('.menu-container');
     menu.classList.toggle('show');
@@ -68,10 +57,7 @@ function closeBubble() {
     bubble.style.display = 'none';
 }
 
-function closeConstructionPopup() {
-    var popup = document.getElementById('constructionPopup');
-    popup.style.display = 'none';
-}
+
 
     </script>
 
