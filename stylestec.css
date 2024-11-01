@@ -179,8 +179,13 @@ nav ul li a:hover {
   margin-top: 15px; /* Más espacio entre el texto y el enlace */
 }
 .column1{
-  width:100%;
+  width:70%;
   height:360px;
+  overflow: hidden;
+}
+.column1 video {
+  width: 70%; /* Hace que el video tome el 100% del ancho del contenedor */
+  height: auto; /* Mantiene la relación de aspecto del video */
 }
 .container {
   display: flex; /* Utiliza flexbox para alinear las columnas horizontalmente */
@@ -191,7 +196,8 @@ nav ul li a:hover {
 .column {
   flex: 1; /* Hace que cada columna ocupe el mismo espacio */
   min-width: 300px; /* Define un ancho mínimo para las columnas */
-  box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
+
+  height: 400px;
 }
 
 /* Ajusta el tamaño de los videos para que se adapten a su contenedor */
