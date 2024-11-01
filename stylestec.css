@@ -31,27 +31,6 @@ header {
   justify-content: space-between;
   width: auto;
 }
-button.arriba {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgb(154, 214, 255);
-    color: white;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1000;
-    text-align: center;
-}
-
-button.arriba:hover {
-    background-color: rgb(0, 183, 255);
-}
 
 h1 {
   margin: 0;
@@ -101,9 +80,14 @@ nav ul li a:hover {
   padding: 20px;
   border-radius: 20px;
   color: #000000; /* Color del texto */
+  height: auto;
 }
 
-
+.section{
+  width: 100%;
+  height: 20px;
+  padding: 20px;
+}
 /* Otros estilos */
 .section {
   text-align: center;
@@ -194,6 +178,50 @@ nav ul li a:hover {
   display: block;
   margin-top: 15px; /* Más espacio entre el texto y el enlace */
 }
+.column1{
+  width:100%;
+  height:360px;
+}
+.container {
+  display: flex; /* Utiliza flexbox para alinear las columnas horizontalmente */
+  gap: 20px; /* Espacio entre columnas */
+  flex-wrap: wrap; /* Permite que las columnas se ajusten en una nueva fila si el espacio es insuficiente */
+}
+
+.column {
+  flex: 1; /* Hace que cada columna ocupe el mismo espacio */
+  min-width: 300px; /* Define un ancho mínimo para las columnas */
+  box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
+}
+
+/* Ajusta el tamaño de los videos para que se adapten a su contenedor */
+video {
+  width: 100%;
+  height: auto;
+}
+
+button.arriba {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(154, 214, 255);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    text-align: center;
+}
+
+button.arriba:hover {
+    background-color: rgb(0, 183, 255);
+}
+
 
 /* Estilos del menú en dispositivos grandes */
 @media (min-width: 992px) {
@@ -233,7 +261,12 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
   }
-
+  .column1{
+    width: auto;
+}
+.column{
+    width: auto;
+}
   h1 {
     font-size: 1.3rem;
   }
@@ -278,4 +311,7 @@ nav ul li a:hover {
   .menu-container ul li {
     margin-bottom: 10px; /* Añadir espacio entre elementos */
   }
+  .container{
+  width:300px;
+}
 }
